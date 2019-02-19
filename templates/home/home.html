@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="jumbotron">
+  home page
+</div>
+
+<div class="container">
+  {% for item in listed_houses %}
+    <div class="house_image">
+      <img src="{{ 'item.picture.url' }}" alt = "Picture of a house">
+    </div>
+    <p>{{ item.description }}</p>
+    <p>{{ item.amount }}</p>
+    <p>{{ item.location }}</p>
+    <div class="details">
+      <a href="{% url 'home:details' item.pk %}"> Details </a>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
