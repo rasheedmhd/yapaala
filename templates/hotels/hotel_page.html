@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="jumbotron">
+  hotels page
+</div>
+
+<div class="container">
+    <div class="hotel_banner">
+      <img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
+    </div>
+    <h1>{{ hotel.name }}</h1>
+    <p>{{ hotel.description }}</p>
+    <p>{{ hotel.amount }}</p>
+    <p>{{ hotel.location }}</p>
+</div>
+
+
+{% endblock %}
