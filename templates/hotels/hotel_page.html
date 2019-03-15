@@ -3,19 +3,19 @@
 {% load static %}
 
 {% block content %}
+  <link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
 
-<div class="jumbotron">
-  hotels page
-</div>
-
-<div class="container">
-    <div class="hotel_banner">
-      <img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
+<div class="main_content">
+	<div class="wrapper">
+    	<div class="hotel_banner">
+	      <img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
+	    </div>
+	    <h1>{{ hotel.name }}</h1>
+	    <p>{{ hotel.description }}</p>
+	    <p class="three"> {{ hotel.amount  }} CALL </p>
+	    <p class="three">{{ hotel.amount }} MESSAGE </p>
+	    <p class="three">{{ hotel.location }}</p>
     </div>
-    <h1>{{ hotel.name }}</h1>
-    <p>{{ hotel.description }}</p>
-    <p>{{ hotel.amount }}</p>
-    <p>{{ hotel.location }}</p>
 </div>
 
 

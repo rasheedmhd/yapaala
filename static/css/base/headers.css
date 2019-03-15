@@ -1,0 +1,101 @@
+
+.snb_container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+img.logo {
+	height: 70px;
+	width: 260px;
+}
+
+
+header {
+	background: #431C53;
+	color: #fff;
+	min-height: 30px;
+	padding-top: 20px;
+	font-family: roboto, sans-serif;
+}
+
+.active {
+	font-size: 18;
+	font-weight: bold;
+	color: #fff;
+}
+
+header li:hover {
+	font-size: 18;
+	font-weight: bold;
+	color: #fff;
+}
+
+header a {
+	color:  #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+header ul {
+	margin: 0;
+	padding: 0;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding: 20px;
+}
+header #branding {
+	float: left;
+}
+header #branding h1 {
+	margin: 0;
+}
+header nav {
+	float: right;
+	margin-top: 0;
+}
+
+
+nav.second {
+	text-align: center;
+}
+
+.second ul { margin: 0; }
+
+nav.second ul li {
+	display: inline-block;
+	padding: 15px;
+}
+
+nav.second a {
+	text-decoration: none;
+	color: #4A4A4A;
+	font-family: roboto, sans-serif;
+}
+
+nav.second li.active {
+	color: #431C53;
+	border-bottom: 3px solid #431C53;
+	font-size: 18px;
+}
+
+
+.attn {
+	font-weight: bold;
+	color: #B8189A;
+	font-size: 18px;
+}
+
+
+nav.second li:hover,
+nav.second li a:hover {
+	font-weight: bold;
+	background: #431C53;
+	color: white;
+	font-size: 18px;
+}

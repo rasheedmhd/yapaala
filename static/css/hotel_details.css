@@ -1,0 +1,19 @@
+.main_content {
+	width: 80%;
+	margin: auto;
+	background: white;
+}
+
+.wrapper {
+
+}
+
+.three {
+	padding: 10px;
+	background-color: #B8189A;
+	border-radius: 3px;
+	color: #fff;
+	margin: 5px;
+	font-size: 20px;
+	text-align: center;
+}

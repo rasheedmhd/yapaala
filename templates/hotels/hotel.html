@@ -3,19 +3,27 @@
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static '/css/hotel.css' %}">
 
-<div class="jumbotron">
-  hotels page
-</div>
-
-<div class="container">
-  {% for hotel in hotel_list %}
-    <a class="a" href="{% url 'hotels:page' hotel.id %}">
-      <div class="hotels_item">
-        <h1> {{ hotel.name }}</h1>
-      </div>
-    </a>
-  {% endfor %}
+<div class="wrapper">
+{% for hotel in hotel_list %}
+	<div class="room">
+		<div class="room_picture">
+			<img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
+		</div>
+		<div class="info">
+			<h2> {{ hotel.name }} </h2>
+				<div class="num_rooms">
+					<p><span> {{ hotel.rooms_count }} </span>  Number of rooms</p>
+					<p class="loc"> {{ hotel.location }} </p>
+					<p><span>{{ hotel.parking_space }}</span>  Parking Spaces </p> 
+					<p><span>{{ hotel.shower }}</span>  Parking Spaces </p> 
+					<p class="details"><a href="{% url 'hotels:page' hotel.id %}"> Details </a> </p>
+				</div>	
+		</div>
+	</div>
+	<hr/>
+{% endfor %}
 </div>
 
 {% endblock %}
