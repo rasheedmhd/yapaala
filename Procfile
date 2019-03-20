@@ -1,1 +1,1 @@
-web: gunicorn yiya.wsgi --log-file -
+web gunicorn yiya.wsgi --log-file -
