@@ -46,3 +46,6 @@ class House(models.Model):
     def get_absolute_url(self):
         return reverse('home:home', args = [str(self.pk)])
 '''
+
+class Slider(models.Model):
+    image = models.ImageField(upload_to='Slider_Images/%Y/%m/%d/', default=None, null=True, blank=True)

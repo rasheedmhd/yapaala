@@ -10,15 +10,11 @@
     <div class="sidebar">
       <div class="categories">
         <h4><a href="{% url 'hotels:hotel' %}"> Hotels </a></h4>
-        {% for item in category%}
+        {% for item in category %}
 
         <li>{{ item.name }}</li>
 
         {% endfor %}
-        <li>Quality Guest House</li>
-        <li>Modern Guest House</li>
-        <li>Green House</li>
-        <li>ITC Guest House</li>
         <li>Mbang Guest House</li>
         <li>Quality Guest House</li>
         <li>Modern Guest House</li>

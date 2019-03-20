@@ -1,23 +1,10 @@
-
-/*banner styling */
-#banner{
-  background: url('VR1.jpg');
-  width: 100%;
-  min-height: 300px;
-  background-position: center;
-  margin-bottom: 10px;
-  overflow: hidden;
-  
-} 
-
-
 .column {
   columns: 2;
   width: 100%;
 }
 
 .column .details {
-  
+
 }
 
 @media(max-width: 480px) {
@@ -27,7 +14,7 @@
       grid-template-columns: 1fr;
       margin: 0;
       padding: 0;
-    } 
+    }
 
     .column {
       columns: 1;
@@ -37,7 +24,7 @@
       list-style: none;
       margin-bottom: 20px;
       padding-left: 10px;
-      text-align: left; 
+      text-align: left;
   }
 
   .sidebar {
@@ -87,7 +74,7 @@ li {
 .categories h4{
   margin-bottom: 20px;
   padding-left: 10px;
-  text-align: left; 
+  text-align: left;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -95,18 +82,17 @@ li {
 .categories li {
   list-style: none;
   padding-left: 10px;
-  text-align: left; 
+  text-align: left;
   margin: 6px;
 }
 
 .categories {
-  
+
   width: 100%;
   border: 1px solid lightgrey;
   border-radius: 3px;
-} 
+}
 
 .details {
   margin: 5px;
 }
-
