@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+
+<div class="wrapper">
+  <div class="main-content">
+    <div class="sidebar">
+      <div class="categories">
+        <h4><a href="{% url 'hotels:hotel' %}"> Hotels </a></h4>
+        {% for item in category%}
+
+        <li>{{ item.name }}</li>
+
+        {% endfor %}
+
+      </div>
+    </div>
+
+{% endblock %}

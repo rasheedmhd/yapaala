@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static '/css/home.css' %}">
+<link rel="stylesheet" href="{% static '/css/home.css' %}">
 
 <div class="wrapper">
   <div class="main-content">
@@ -31,10 +31,13 @@
           <div class="property-box">
              <img src="{{ item.picture.url }}" alt = "Picture of a house">
               <div class="details">
+                <p style="font-weight:bold"> {{ item.name }}</p>
+                <hr/>
                 <p>{{ item.description }}</p>
                 <p>{{ item.amount }}</p>
                 <p>{{ item.location }}</p>
                 <p><a style="color:dodgerblue" href="{% url 'home:post_by_category' item.category.slug %}">Area: {{ item.category.name }}</a></p>
+                <p style="color:lightgrey">Posted on - {{ item.created|date:"F j, Y" }}</p>
               </div>
           </div>
         </a>

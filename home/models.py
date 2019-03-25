@@ -23,7 +23,7 @@ class House(models.Model):
     picture     = models.ImageField(upload_to='houses/%Y/%m/%d/', default=None, null=True, blank=True)
     name        = models.CharField(max_length=100, blank=True)
     slug        = models.SlugField(max_length=100, db_index=True)
-    description = models.CharField(max_length=50, default=None, null=True, blank=True)
+    description = models.TextField(default=None, null=True, blank=True)
     price       = models.IntegerField(default=None, null=True, blank=True)
     location    = models.CharField(max_length=50, default=None, null=True, blank=True)
     room_count  = models.PositiveIntegerField()
@@ -41,7 +41,7 @@ class House(models.Model):
         return self.name
 
     def amount(self):
-        return "GH₵"+ str(self.price) + " /month"
+        return "GH₵ "+ str(self.price) + "/month"
 '''
     def get_absolute_url(self):
         return reverse('home:home', args = [str(self.pk)])

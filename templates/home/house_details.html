@@ -8,7 +8,7 @@
     <div class="main">
       <div class="hotel">
         <div class="heading">
-          <h3>GH₵ 35/month</h3>
+          <h3>{{ house.amount }}</h3>
         </div>
         <div class="box">
           <img src="{{ house.picture.url }}" alt = "Picture of a house">
@@ -20,8 +20,7 @@
       </div>
       <div class="more">
         <h2> MORE INFORMATION </h2>
-        <p> {{ house.amount }} </p>
-        <p> {{ house.location }} </p>
+        <p> {{ house.options }} </p>
         <p> <a style="color:dodgerblue" href="{% url 'home:post_by_category' house.category.slug %}">AREA: {{ house.category.name }}</a></p>
       </div>
       <div class="list">
@@ -29,23 +28,23 @@
           <h2> AMENITIES </h2>
           <tr class="grey">
             <td >
-              <li> {{ house.location }}
+              <li>Number of Rooms available: {{ house.room_count }}
               </li>
             </td>
           </tr>
           <tr>
             <td>
-              <li> {{ house.location }} </li>
+              <li>Types of Rooms available: {{ house.types }} </li>
             </td>
           </tr>
           <tr class="grey">
             <td>
-              <li> {{ house.location }} </li>
+              <li>Options available: {{ house.options }} </li>
             </td>
           </tr>
           <tr>
             <td>
-              <li> {{ house.location }} </li>
+              <li>Category: {{ house.category }} </li>
             </td>
           </tr>
           <tr class="grey">
@@ -61,9 +60,9 @@
     <div class="sidebar">
       <h3>Contact</h3>
       <div class="contact">
-         <button class="call"><a href="05444293033">Call</a></button> <br>
-         <button class="message"><a href="mailto:yapaala@gmail.com">Message</a></button> <br>
+         <button class="call"> Call </button> <br>
          <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
+         <button class="message"><a href="mailto:yapaala.info@gmail.com">Email</a></button> <br>
     </div>
       </div>
   </div>
@@ -71,7 +70,7 @@
   <div class="main_contact">
         <div></div>
          <button class="call"><a href="05444293033">Call</a></button> <br>
-         <button class="message"><a href="mailto:yapaala@gmail.com">Message</a></button> <br>
+         <button class="message"><a href="mailto:yapaala.info@gmail.com">Message</a></button> <br>
          <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
     </div>
 
