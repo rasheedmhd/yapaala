@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'busoro.apps.BusoroConfig',
     'artisans.apps.ArtisansConfig',
     'blog.apps.BlogConfig',

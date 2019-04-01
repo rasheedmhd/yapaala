@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+dashboard page here
+
+{{ user.username }}
+
+<ul>
+  <li><a href="{% url 'busoro:busoro_pay' %}"> busoro pay home page </a></li>
+  <li><a href="{% url 'busoro:transaction_list' %}"> busoro pay transactions page </a></li>
+  <li><a href="{% url 'busoro:add_payment' %}"> busoro pay add payment </a></li>
+  <li><a href="{% url 'artisans:artisans_home' %}"> artisans home page </a></li>
+  <li><a href="{% url 'artisans:all_artisans' %}"> Looking for an Artisan? </a></li>
+  <!-- This link is supposed to take you to the
+  artisans home page and scroll you down to the part of the
+  page that has the application form for new artisans.-->
+  <li><a href="{% url 'artisans:all_artisans' %}"> Want to become an Artisan now? </a></li>
+</ul>
+
+{% endblock %}

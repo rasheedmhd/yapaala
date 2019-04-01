@@ -21,7 +21,7 @@ class Category(models.Model):
 # Create your models here.
 class House(models.Model):
     picture     = models.ImageField(upload_to='houses/%Y/%m/%d/', default=None, null=True, blank=True)
-    name        = models.CharField(max_length=100, blank=True)
+    about        = models.CharField(max_length=100, blank=True)
     slug        = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(default=None, null=True, blank=True)
     price       = models.IntegerField(default=None, null=True, blank=True)
@@ -34,7 +34,7 @@ class House(models.Model):
     category    = models.ForeignKey(Category, related_name="houses", on_delete=models.CASCADE)
 
     class Meta:
-        ordering = ('name',)
+        ordering = ('about',)
         index_together  = (('id', 'slug'), )
 
     def __str__(self):
