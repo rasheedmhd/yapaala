@@ -1,0 +1,55 @@
+.auth-container {
+  padding: 30px;
+  width: 80%;
+  margin: auto;
+  background: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.salutation {
+  font-family: Raleway, Monsterrat, Arial,sans-serif;
+  font-size: 90px;
+  color:midnight blue;
+  text-align: center;
+}
+
+h3 {
+  color: darkgrey;
+  text-align: center;
+  font-size: 34px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input {
+  padding: 3px;
+}
+
+.helptext,li {
+  display: none;
+}
+
+.auth-forms {
+  padding: 30px;
+  border: 3px solid purple;
+  border-radius: 3px;
+  text-align: center;
+  width: 30%;
+  margin: auto;
+  color: grey;
+}
+
+.auth-btn {
+  padding: 10px;
+  color:white;
+  background: purple;
+  width: 80%;
+  border-radius: 10px;
+}

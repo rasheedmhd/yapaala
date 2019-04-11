@@ -1,0 +1,52 @@
+.snb_container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.container {
+  background: white;
+}
+
+img.logo {
+	height: 70px;
+	width: 260px;
+}
+
+
+header {
+	background: #fff;
+	color: #1B1464;
+	min-height: 30px;
+	padding-top: 20px;
+	font-family: roboto, sans-serif;
+}
+
+header li:hover {
+	font-size: 18;
+	font-weight: bold;
+	color: #1B1464;
+}
+
+header a {
+	color:  #1B1464;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+header ul {
+	margin: 0;
+	padding: 0;
+}
+
+header li {
+	float: left;
+	display: inline;
+	padding: 20px;
+}
+
+header nav {
+	float: right;
+	margin-top: 0;
+}

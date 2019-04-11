@@ -1,0 +1,107 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/rental pay/header.css'%}">
+<link rel="stylesheet" href="{% static 'css/rental pay/rental_pay_homepage.css'%}">
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title> Busor | Rent Payment made easier </title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+
+        <a href="#"> <img src="images/logo.png" alt="BUSOR PAY:)" class="logo"> </a>
+        <nav>
+          <a href="#">
+            <img src="" alt="ham" class="hide-desktop" id="menu">
+          </a>
+          <ul class="show-desktop hide-desktop" id="nav">
+            <li id="exit" class="exit-btn hide-desktop"> <img src="" alt="exit"> </li>
+            <li> <a href="{% url 'accounts:login' %}"> login </a> </li>
+            <li> <a href="{% url 'accounts:register' %}"> register </a> </li>
+          </ul>
+        </nav>
+
+      </header>
+
+      <section>
+        <div class="hello">
+
+          <h1> Hello, Landlord :) </h1>
+          <div class="subhead"> We help you pay your rent in installments starting as little as GHS5.
+          <br/>
+          anytime. anywhere.</div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+    <div class="image-container">
+      <img src="{% static 'assets/hero.jpg' %}" alt="banner image">
+    </div>
+
+    <div class="blue-container">
+      <div class="container">
+        <ul>
+
+          <li>
+            <img src="images/side image.jpeg" alt="mom and son">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sut </p>
+          </li>
+
+          <li>
+            <img src="images/calender.svg" alt="calender">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sut </p>
+          </li>
+
+          <li>
+            <img src="images/calender.svg" alt="calender">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sut </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grey-container">
+      <div class="container">
+        <ul>
+
+          <li>
+            <figure>
+              <img src="images/user1.svg" alt="user testimonial picture">
+              <blockquote cite="http://">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sut
+              </blockquote>
+              <figcaption> - Jane Doe </figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure>
+              <img src="images/user2.svg" alt="user testimonial picture">
+              <blockquote cite="http://">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sut
+              </blockquote>
+              <figcaption> - Jane Doe </figcaption>
+            </figure>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2> Start your free trial now </h2>
+      <p> <a href="#" class="cta"> Get Started </a>  </p>
+    </div>
+
+  </body>
+</html>

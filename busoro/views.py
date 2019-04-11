@@ -2,12 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def busoro(request):
-    return render(request, 'busoro/busoro_pay_home.html')
+def rental_pay_app(request):
+    return render(request, 'pay_rent/rental_pay_home.html')
 
 
 def add_payment_view(request):
-    return render(request, 'busoro/add_payment.html')
+    return render(request, 'pay_rent/add_payment.html')
 
 def transaction_list_view(request):
-    return render(request, 'busoro/transaction_list.html')
+    return render(request, 'pay_rent/transaction_list.html')

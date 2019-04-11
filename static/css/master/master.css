@@ -1,0 +1,43 @@
+body {
+  background: white;
+}
+
+figure {
+  margin: 30px;
+}
+
+blockquote {
+  color:grey;
+  font-style: italic;
+  font-family: lato, sans-serif;
+}
+.text-container {
+  width: 80%;
+  margin: auto;
+}
+
+.p-container {
+  width: 80%;
+  margin: auto;
+}
+
+h3 {
+  color: deepgrey;
+}
+
+h1 {
+  font-size: 84px;
+}
+
+p {
+  font-size: 22px;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}

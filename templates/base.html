@@ -23,7 +23,7 @@
         <a class="navbar-brand" href="{% url 'home:home' %}"> www.yapaala.com </a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'home:contact' %}">  Contact Us: +233 54 796 3492  </a>
+            <a class="nav-link" href="#">  Contact Us: +233 54 796 3492  </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="mailto:yapaala.info@gmail.com"> yapaala.info@gmail.com </a>
@@ -39,7 +39,7 @@
           </form>
         {% else %}
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'accounts:login' %}"> Login | </a>
+            <a class="nav-link" href="{% url 'accounts:login' %}"> Login </a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'accounts:register' %}"> Register </a>
@@ -62,9 +62,9 @@
           <li><a href="{% url 'blog:blog_home' %}"> Blog </a></li>
           <li><a href="{% url 'artisans:artisans_home' %}"> Artisans </a></li>
           {% if user.is_authenticated %}
-            <li><a href="{% url 'busoro:add_payment' %}"> Pay Rent </a></li>
+            <li><a href="{% url 'rental_pay:add_payment' %}"> Pay Rent </a></li>
           {% else %}
-            <li><a href="{% url 'busoro:busoro_pay' %}"> Pay Rent </a></li>
+            <li><a href="{% url 'rental_pay:rental_pay' %}"> Pay Rent </a></li>
           {% endif %}
         </ul>
       </nav>
@@ -89,6 +89,48 @@
   {% endblock %}
 
   {% block content %}
+  {% endblock %}
+
+  {% block footer %}
+  <footer>
+  	<div class="footer">
+  		<div class="row1">
+  			<h3 class="f-headers"> ABOUT US </h3>
+  				<div class="details">
+  					<li> <a href="{% url 'blog:mission' %}"> Our Mission </a> </li>
+  					<li><a href="{% url 'blog:help_and_faq' %}"> Help and FAQ </a></li>
+  					<li><a href="{% url 'blog:terms' %}"> Privay, Terms &amp Refunds </a></li>
+            <li><a href="#"> Team </a></li>
+  				</div>
+  		</div>
+  		<div class="row2">
+  			<h3 class="f-headers"> BLOG </h3>
+  				<div class="details">
+  					<li> <a href="{% url 'blog:writing' %}"> Become an Author </a> </li>
+  				</div>
+  		</div>
+  		<div class="row3">
+  			<h3 class="f-headers"> ARTISANS </h3>
+  				<div class="details">
+  					<li> <a href="{% url 'artisans:artisans_home' %}"> Become an Artisan </a> </li>
+  					<li> <a href="{% url 'artisans:all_artisans' %}"> Hire and Artisan </a> </li>
+  					<li> <a href="{% url 'artisans:all_artisans' %}"></a> </li>
+  				</div>
+  		</div>
+  		<div class="row4">
+  			<h3 class="f-headers"> GET IN TOUCH </h3>
+  				<div class="details">
+            <li><a href="mailto:yapaala.info@gmail.com"> Yapaala.info@gmail.com </a></li>
+  					<li><a href="#"> Facebook </a></li>
+  					<li><a href="#"> Instagram </a></li>
+  					<li><a href="#"> Twitter </a></li>
+  				</div>
+  		</div>
+  	</div>
+    <div class="c">
+      <p> &copy 2018 - 2019 <a href="#"> Placenta Network</a>. All Rights Reserved.</p>
+    </div>
+  </footer>
   {% endblock %}
   </body>
 </html>

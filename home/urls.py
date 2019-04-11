@@ -20,7 +20,5 @@ urlpatterns = [
     path('property/<int:pk>/details/', house_details.as_view(), name="details"),
     path('about', views.about, name="about"),
 	path('cat-list', category_list, name="category_list"),
-    path('contact', views.contact, name="contact"),
-
 	path('comming-soon', views.comming_soon_view, name="comming_soon"),
 ]

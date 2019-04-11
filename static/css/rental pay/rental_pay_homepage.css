@@ -1,0 +1,26 @@
+.hello {
+  padding: 30px;
+  border-bottom: 8px solid #1B1464;
+}
+
+.hello  h1 {
+  text-align: center;
+  font-size: 74px;
+  font-weight: bold;
+  color: #1B1464;;
+  font-family: roboto, sans-serif;
+}
+
+.subhead {
+  text-align: center;
+  font-size: 22px;
+  color: grey;
+  font-family: roboto, sans-serif;
+}
+
+.image-container img {
+  background: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

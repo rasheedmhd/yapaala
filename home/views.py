@@ -45,9 +45,6 @@ class all_areas_view(ListView):
 def about(request):
     return render(request, 'home/about.html', {})
 
-def contact(request):
-    return render(request, 'home/contact.html', {})
-
 class house_details(DetailView):
     model = House
     template_name = 'home/house_details.html'
