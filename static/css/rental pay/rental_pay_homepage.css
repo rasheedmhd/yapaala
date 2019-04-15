@@ -1,3 +1,7 @@
+body {
+    font-family: Quicksand, sans-serif;
+}
+
 .hello {
   padding: 30px;
   border-bottom: 8px solid #1B1464;
@@ -8,14 +12,12 @@
   font-size: 74px;
   font-weight: bold;
   color: #1B1464;;
-  font-family: roboto, sans-serif;
 }
 
 .subhead {
   text-align: center;
   font-size: 22px;
   color: grey;
-  font-family: roboto, sans-serif;
 }
 
 .image-container img {
@@ -35,12 +37,10 @@
   border-bottom-right-radius: 40px;
   transform: skewY(-2deg);
   text-align: center;
-  font-family: arial, sans-serif;
 }
 
 .inner-container h1  {
   font-size: 54px;
-  font-family: lato, sans-serif;
   transform: skewY(2deg);
   margin:5px;
 }
@@ -87,7 +87,6 @@ p {
 .btm-container {
   margin: 10% 0 10% 0;
   text-align: center;
-  font-family: ubuntu, sans-serif;
   font-weight: bold;
   color: black;
 }

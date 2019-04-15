@@ -4,13 +4,14 @@
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/base/pagination.css' %}">
 
 
 <div class="wrapper">
-  <div class="main-content">
- <div class="column">
 
-      {% for item in object_list %} 
+  <div class="main-content">
+    <div class="column">
+      {% for item in object_list %}
 
         <a href="{% url 'home:details' item.pk %}">
           <div class="property-box">
@@ -24,28 +25,31 @@
         </a>
 
       {% endfor %}
+    </div>
+  </div>
 
+  <section id="pagination">
 
-<div class="pagination">
+    <div class="pagination">
 
-  {% if is_paginated %}
-    <span>
+    {% if is_paginated %}
+      <span>
 
-      {% if page_obj.has_previous %}
-        <a href="{% url 'home:all' %}?page={{ page_obj.previous_page_number }}"> Previous </a>
-      {% endif %}
+        {% if page_obj.has_previous %}
+          <a href="{% url 'home:all' %}?page={{ page_obj.previous_page_number }}"> Previous </a>
+        {% endif %}
 
-      <span> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+        <span> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
 
-      {% if page_obj.has_next %}
-      <a href="{% url 'home:all' %}?page={{ page_obj.next_page_number }}"> Next </a>
-      {% endif %}
+        {% if page_obj.has_next %}
+        <a href="{% url 'home:all' %}?page={{ page_obj.next_page_number }}"> Next </a>
+        {% endif %}
 
-    </span>
+      </span>
 
-  {% endif %}
+    {% endif %}
 
-</div>
-</div>
+  </section>
+
 </div>
 {% endblock %}

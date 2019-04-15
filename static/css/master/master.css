@@ -1,5 +1,6 @@
 body {
   background: white;
+  font-family: Quicksand, sans-serif;
 }
 
 figure {
@@ -9,7 +10,6 @@ figure {
 blockquote {
   color:grey;
   font-style: italic;
-  font-family: lato, sans-serif;
 }
 .text-container {
   width: 80%;
@@ -19,10 +19,6 @@ blockquote {
 .p-container {
   width: 80%;
   margin: auto;
-}
-
-h3 {
-  color: deepgrey;
 }
 
 h1 {

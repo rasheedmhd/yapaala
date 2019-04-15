@@ -1,5 +1,6 @@
 body {
   background: white;
+  font-family: Quicksand, sans-serif;
 }
 
 .auth-container {
@@ -7,7 +8,6 @@ body {
 }
 
 .salutation {
-  font-family: Raleway, Monsterrat, Arial,sans-serif;
   font-size: 70px;
   color: purple;
   text-align: center;
