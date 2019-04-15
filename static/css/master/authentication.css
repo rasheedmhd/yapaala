@@ -1,7 +1,7 @@
 body {
   background: white;
-  background: url('./assets/hero.jpg');
 }
+
 .auth-container {
   padding: 30px;
 }
