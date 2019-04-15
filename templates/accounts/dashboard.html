@@ -1,21 +1,69 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/accounts/dashboard.css' %}">
 
-dashboard page here
+<div class="about-dashboard">
+  Welcome to your profile dashboard. Your dashboard is a gateway to the whole Yapaala
+  Platform. Reach to the Artisans page, Read Blog Posts, Pay your rent all here.
+  You can also see the status of your rent payments
+</div>
 
-{{ user.username }}
+	<div class="dashboard">
 
-<ul>
-  <li><a href="{% url 'busor:busor_pay' %}"> busor pay home page </a></li>
-  <li><a href="{% url 'busor:transaction_list' %}"> busor pay transactions page </a></li>
-  <li><a href="{% url 'busor:add_payment' %}"> busor pay add payment </a></li>
-  <li><a href="{% url 'artisans:artisans_home' %}"> artisans home page </a></li>
-  <li><a href="{% url 'artisans:all_artisans' %}"> Looking for an Artisan? </a></li>
-  <!-- This link is supposed to take you to the
-  artisans home page and scroll you down to the part of the
-  page that has the application form for new artisans.-->
-  <li><a href="{% url 'artisans:all_artisans' %}"> Want to become an Artisan now? </a></li>
-</ul>
+		<div class="dash-sidebar">
+			<div class="profile">
+				<img src="{% static 'assets/dashboard/profile.png' %}">
+				<p class="user-name">{{ user.username }}</p>
+			</div>
+
+			<div class="btns">
+				<p class="artisan">
+          <a href="{% url 'artisans:artisans_home' %}"> Become an Artisan </a>
+        </p>
+				<p class="payment">
+          <a href="{% url 'rental_pay:add_payment' %}"> Payment </a>
+        </p>
+        <p class="trxns">
+          <a  href="{% url 'rental_pay:transaction_list' %}"> Transactions </a>
+        </p>
+			</div>
+		</div>
+
+
+		<div class="dash-content">
+
+				<a href="{% url 'rental_pay:add_payment' %}"><div class="box">
+					<img src="{% static 'assets/dashboard/pay rent.svg' %}">
+					<h4>Pay Rent</h4>
+				</div></a>
+
+				<a href="{% url 'artisans:all_artisans' %}"><div class="box">
+					<img src="{% static 'assets/dashboard/find artisans.svg' %}">
+					<h4>Find an Artisan</h4>
+				</div></a>
+
+				<a href="{% url 'blog:blog_home' %}"><div class="box">
+					<img src="{% static 'assets/dashboard/read blog posts.svg' %}">
+					<h4>Read</h4>
+				</div></a>
+
+    </div>
+
+    <hr/>
+
+    <div class="dash-details">
+      <div class="">
+        <h2> Rent Expiry Status</h2>
+      </div>
+
+      <div class="">
+        <h2> Pending Payments </h2>
+      </div>
+
+    </div>
+
+	</div>
 
 {% endblock %}

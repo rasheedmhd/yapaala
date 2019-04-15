@@ -4,15 +4,15 @@
 	background-color: #fff;
 }
 
-.room {
+.hotel {
 	display: flex;
 	padding: 10px;
 	width:100%;
 }
 
-.room_picture img{
-	/*width: 800px;
-	height: 533px;*/
+.hotel_picture img{
+	width: 60%;
+	height: 50%;
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
@@ -40,8 +40,11 @@
 	text-align: center;
 }
 
-.loc { color:#B8189A; }
-.num_rooms p{
+.loc {
+	color: #B8189A;
+ }
+
+.num_rooms p {
 	padding-bottom: 10px;
 }
 
@@ -57,15 +60,6 @@ hr {
 	background-color: #B8189A;
 }
 
-
-.empty {
-	margin-top: 60px;
-}
-
-.row li, h3 {
-	font-size: 16px;
-}
-
 .details li {
 	font-size: 20px;
 }
@@ -77,7 +71,7 @@ hr {
 		height: 100%;
 	}
 
-	.room_picture {
+	.hotel_picture {
 		width: 50%;
 	}
 
@@ -87,7 +81,7 @@ hr {
 		padding-left: 10px;
 	}
 
-	.room {
+	.hotel {
 		margin: 0;
 		padding: 0;
 		width: 100%;
@@ -98,9 +92,6 @@ hr {
 		font-size: 16px;
 	}
 
-	.num_rooms h3 {
-		display: flex;
-	}
 }
 
 @media(max-width: 480px) {
@@ -110,18 +101,4 @@ hr {
 
 	}
 
-	.footer li, h3 {
-		list-style: none;
-	}
-
-	.footer .details li, h3{
-		font-size: 14px;
-		
-	}
-
-	.footer {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr; 
-	}
-} 
+}

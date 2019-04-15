@@ -1,19 +1,332 @@
-.main_content {
-	width: 80%;
-	margin: auto;
-	background: white;
+/*=================================
+	BEGINING OF BODY STYLING
+===================================*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  background-color: lightgrey;
+  width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+/*=================================
+	END OF BODY STYLING
+===================================*/
+
+/*=================================
+	BEGINING OF WRAPPER STYLING
+===================================*/
 .wrapper {
+  display: flex;
+  grid-template-columns: 20% 50% 30%;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/*=================================
+	END OF WRAPPER STYLING
+===================================*/
+
+/*=================================
+	BEGINING OF LEFT-SIDEBAR STYLING
+===================================*/
+.left-sidebar{
+	width: 20%;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	height: 90%;
+	padding: 20px;
+}
+
+.hotel img {
+	width: 100%;
+	height: 100%;
+}
+.details {
+	border: 2px solid grey;
+}
+.details span {
+	color: purple;
+	font-size: 20px;
+}
+.details h3 {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	color: #431C53;
+}
+.contact_info {
+	margin-top: 10px;
+	width: 100%;
+}
+.contact_info a{
+	color: white;
+}
+.contact_info .call, .whatsapp, .message{
+	text-align: center;
+	color: white;
+	background-color: #431C53;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 20px;
+	padding: 10px;
+	margin: 10px;
+	align-items: center;
 
 }
 
-.three {
+/*=================================
+	END OF LEFT-SIDEBAR STYLING
+===================================*/
+
+/*=================================
+	BEGINING OF MAIN-CONTENT STYLING
+===================================*/
+
+.square {
+	margin: 0;
 	padding: 10px;
-	background-color: #B8189A;
-	border-radius: 3px;
-	color: #fff;
-	margin: 5px;
-	font-size: 20px;
+	background: #431C53;
+	color: white;
+}
+
+
+.body-content {
+	width: 50%;
+
+	}
+.houses li{
+	list-style: none;
+}
+.hotel img{
+	padding: 10px;
+}
+.hotel {
+	margin-top: 10px;
+	padding: 0;
+}
+.heading h3{
+	font-size: 30px;
+	padding: 10px;
+	text-align: right;
+	background-color: white;
+	margin: 0;
+	color: black;
+
+}
+.note {
+	margin: 10px;
+}
+
+.box img{
+	width: 100%;
+	height: 500px;
+}
+
+.details {
+	background-color: white;
+	margin: 0;
+	padding: 10px;
+	}
+
+.more, .list {
+	background-color: white;
+	margin: 10px auto;
+	padding: 10px;
+}
+.details h2, .more h2, .list h2 {
 	text-align: center;
+	color: purple;
+}
+.details li, .more, .list, h2 {
+	list-style: none;
+	color: grey;
+}
+
+table {
+	width: 100%;
+}
+
+.grey{
+	background-color: lightgrey;
+}
+
+.main h2 { color: purple; }
+
+.last-contact {
+	display: none;
+}
+
+/*=================================
+	END OF MAIN-CONTENT STYLING
+===================================*/
+
+/*=================================
+	BEGINING OF RIGHT-SIDEBAR STYLING
+===================================*/
+.right-sidebar{
+	width: 20%;
+
+}
+.right-sidebar .reviews {
+	border: 1px solid grey;
+	padding: 10px;
+}
+.right-sidebar{
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	height: 90%;
+	padding: 20px;
+}
+.reviews {
+	width: 100%;
+}
+
+.form {
+	width: 80%;
+}
+.name {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.name .textarea {
+	margin-left: 10px;
+}
+.submit {
+	font-size: 18px;
+	border-radius: 6px;
+	background-color: purple;
+	color: white;
+}
+
+
+.left-details {
+	display: none;
+}
+.right-details {
+	display: none;
+}
+
+/*=================================
+	END OF RIGHT-SIDEBAR STYLING
+===================================*/
+
+/*=================================
+	MEDIA QUERIES
+===================================*/
+
+@media(max-width: 768px) {
+	.wrapper {
+    width: 90%;
+    margin-left: 0px;
+    padding: 0;
+}
+.box img{
+	width: 100%;
+	height: auto;
+}
+
+.heading h3{
+	font-size: 20px;
+	padding: 10px;
+}
+
+.details h2, .more h2, .list h2 {
+	font-size: 18px;
+}
+
+
+	.body-content {
+		width: 100%;
+	}
+	.left-sidebar {
+		display: none;
+	}
+	.right-sidebar {
+		display: none;
+	}
+	.last-contact {
+		display: flex;
+		width: 100%;
+		margin: 0;
+
+	}
+	.call, .message, .whatsapp {
+	text-align: center;
+	background-color: purple;
+	padding: 10px;
+	height: 50px;
+	border-radius: 6px;
+	cursor: pointer;
+	margin: 5px;
+	font-size: 18px;
+
+}
+
+
+.last-contact a {
+	text-decoration: none;
+	color: white;
+}
+
+.details h2, .more h2, .list h2 {
+	text-align: left;
+	color: purple;
+}
+.right-details{
+	width: 100%;
+
+
+}
+.right-sidebar .review {
+	border: 1px solid grey;
+
+}
+.review {
+	width: 100%;
+	margin: 5px;
+}
+.review h4{
+	color: purple;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.form {
+	width: 100%;
+	margin-left: 10px;
+}
+.name {
+	margin-bottom: 10px;
+	height: 30px;
+
+}
+.name, .textarea {
+	width: 80%;
+	border: 1px solid grey;
+}
+
+.submit {
+	font-size: 18px;
+	border-radius: 6px;
+	background-color: purple;
+	color: white;
+	margin-bottom: 30px;
+}
+.left-details {
+	display: block;
+}
+.right-details {
+	display: block;
+}
+
 }

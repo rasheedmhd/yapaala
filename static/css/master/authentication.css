@@ -1,16 +1,15 @@
+body {
+  background: white;
+  background: url('./assets/hero.jpg');
+}
 .auth-container {
   padding: 30px;
-  width: 80%;
-  margin: auto;
-  background: white;
-  margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .salutation {
   font-family: Raleway, Monsterrat, Arial,sans-serif;
-  font-size: 90px;
-  color:midnight blue;
+  font-size: 70px;
+  color: purple;
   text-align: center;
 }
 
@@ -37,9 +36,9 @@ input {
 }
 
 .auth-forms {
-  padding: 30px;
-  border: 3px solid purple;
-  border-radius: 3px;
+  padding: 20px;
+  border: 1px solid purple;
+  border-radius: 4px;
   text-align: center;
   width: 30%;
   margin: auto;

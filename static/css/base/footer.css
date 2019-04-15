@@ -2,6 +2,7 @@ footer {
   width: 100%;
   border-top: 12px solid purple;
   background-color: white;
+  margin-top: 5%;
 }
 
 .footer {
@@ -24,6 +25,7 @@ footer {
   padding: 0;
   margin: 0px;
 }
+
 .footer .details li {
   text-align: center;
   padding: 3px;
@@ -60,4 +62,8 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+
+.f-headers {
+  padding-top: 10px;
 }

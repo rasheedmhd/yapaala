@@ -7,6 +7,20 @@
 
 }
 
+p .amt {
+  background: white;
+  color:#431C53;
+  font-weight: bold;
+}
+
+.details .abt-property {
+  background: #431C53;
+  padding:10px;
+  color:white;
+  border-right-bottom-style: transform skewX(-2deg);
+
+}
+
 @media(max-width: 480px) {
 
     .main-content{

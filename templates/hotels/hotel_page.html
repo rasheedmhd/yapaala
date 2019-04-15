@@ -3,19 +3,156 @@
 {% load static %}
 
 {% block content %}
-  <link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
+<link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
 
-<div class="main_content">
-	<div class="wrapper">
-    	<div class="hotel_banner">
-	      <img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
-	    </div>
-	    <h1>{{ hotel.name }}</h1>
-	    <p>{{ hotel.description }}</p>
-	    <p class="three"> {{ hotel.amount  }} CALL </p>
-	    <p class="three">{{ hotel.amount }} MESSAGE </p>
-	    <p class="three">{{ hotel.location }}</p>
-    </div>
+<div class="wrapper">
+		<div class="left-sidebar">
+			<div class="hotel">
+				<img src="{{ hotel.banner.url }}">
+				<h4 class="square" >{{ hotel.name }}</h4>
+        <p class="location"> LOCATION: {{ hotel.location }}</p>
+				<div class="details">
+					<p class="square"> Quick Info:</p>
+					<table>
+						<tr>
+							<td>Bedrooms</td>
+							<td><span> {{ hotel.rooms_count  }}</span></td>
+						</tr>
+						<tr>
+							<td>Bathrooms</td>
+							<td><span> {{ hotel.shower  }}</span></td>
+						</tr>
+						<tr>
+							<td>Car park</td>
+							<td><span> {{ hotel.parking_space  }}</span></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+				<div class="contact_info">
+					<p class="call"><a href="0547963492">Call</a></p>
+					<p class="whatsapp"><a href="0547963492">Whatsapp</a></p>
+					<p class="call"><a href="mailto:yapaala@gmail.com">Email</a></p>
+				</div>
+		</div>
+
+		<div class="body-content">
+			<div class="hotel">
+				<div class="box">
+					<img src="{{ hotel.banner.url }}">
+				</div>
+			</div>
+			<div class="hotel">
+				<div class="box">
+					<img src="{{ hotel.banner.url }}">
+				</div>
+			</div>
+<div class="note">
+		<p>{{ hotel.description }}</p>
+</div>
+	<div class="left-details">
+				<div class="hotel">
+									<img src="{{ hotel.banner.url }}">
+				</div>
+				<div class="details">
+								<h2>Description</h2>
+								<table>
+						<tr>
+							<td>Bedrooms</td>
+							<td><span> {{ hotel.rooms_count  }}</span></td>
+						</tr>
+						<tr>
+							<td>Bathrooms</td>
+							<td><span> {{ hotel.shower  }}</span></td>
+						</tr>
+						<tr>
+							<td>Car park</td>
+							<td><span> {{ hotel.parking_space  }}</span></td>
+						</tr>
+					</table>
+				</div>
+	</div>
+
+			<div class="list">
+				<table>
+					<h2> AMENITIES </h2>
+					<tr class="grey">
+						<td >
+							<li>Air Condition</li>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<li>Cooker</li>
+						</td>
+					</tr>
+					<tr class="grey">
+						<td>
+							<li>Refrigerator</li>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<li>Car park</li>
+						</td>
+					</tr>
+					<tr class="grey">
+						<td>
+							<li>Sercurity Service</li>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<li>Water suppliers</li>
+						</td>
+					</tr>
+					<tr class="grey">
+						<td>
+							<li>Garden</li>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+			<div class="right-details">
+					<div class="review">
+							<h4 class="square" >Reviews </h4>
+				<p><strong>Kwasi Arthur:</strong> Wow Yapaala is the best rental platform i've ever come
+				acrose. I just rental a room there last week and the whole process
+			is very really amazing.</p>
+			<h4>Write your review here!</h4>
+			<div class="form">
+  			<input type="text" class="name" name="name" placeholder="Name" required=""> <br>
+  			<textarea class="textarea"></textarea>  <br>
+  			<input type="button" class="submit" name="submit" value="Submit">
+		</div>
+					</div>
+			</div>
+			<div>
+				<div class="last-contact">
+					<button class="call"><a href="0547963492">Call</a></button> <br>
+				   <button class="message"><a href="mailto:yapaala@gmail.com">Message</a></button> <br>
+				   <button class="whatsapp"><a href="mailto:yapaala.info@gmail.com">Whatsapp</a></button>
+				</div>
+
+			</div>
+		</div>
+
+	<div class="right-sidebar">
+			<div class="reviews">
+				<h4 class="square" > Reviews </h4>
+				<p><strong class="">Kwasi Arthur:</strong> Wow Yapaala is the best rental platform i've ever come
+				acrose. I just rental a room there last week and the whole process
+			is really amazing.</p>
+			<h4 class="square">Write your reviews here!</h4>
+			<div class="form">
+			<input type="text" class="name" name="name" placeholder="Name" required=""> <br>
+			<textarea class="textarea"></textarea>
+			<input class="square" type="button" class="submit" name="submit" value="Submit">
+		</div>
+		</div>
+	</div>
+
 </div>
 
 

@@ -63,8 +63,8 @@
 	border-radius: 4px;
 	background-color: #fff;
 	text-align: center;
-	
-} 
+
+}
 
 
 .call, .message, .whatsapp {
@@ -77,7 +77,7 @@
 	margin-top: 20px;
 	margin-bottom: 40px;
 	font-size: 20px;
-	
+
 }
 
 .contact a {
@@ -115,7 +115,7 @@ td {
 .main h2 { color: #B8189A; }
 .empty {
 	margin-top: 60px;
-} 
+}
 @media(max-width: 480px) {
 	.wrapper{
 	width: 100%;
@@ -123,18 +123,18 @@ td {
 	grid-template-columns: 100%;
 
 	}
-	
+
 	.main_contact {
 	width: 100%;
 	display: row;
 }
 	.sidebar {
-		display: none; 
+		display: none;
 	}
 	.main_contact {
 		width: 100%;
 		display: flex;
-		
+
 	}
 	.call, .message, .whatsapp {
 	font-size: 16px;
@@ -153,7 +153,7 @@ td {
 	}
 	.sidebar {
 		display: none;
-		
+
 
 	}
 	content a {
@@ -163,6 +163,6 @@ td {
 	font-size: 60px;
 }
 	.grey {
-		
+
 	}
 }

@@ -13,7 +13,7 @@ def register_view(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('accounts:dashboard')
+            return redirect('accounts:login')
         else:
             return redirect('accounts:register')
     else:
@@ -32,7 +32,7 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form':form})
 
-@login_required
+@login_required(login_url='accounts:login')
 def dashboard_view(request):
     return render(request, 'accounts/dashboard.html')
 
