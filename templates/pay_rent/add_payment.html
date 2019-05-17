@@ -4,6 +4,10 @@
 {% block content %}
 <h1> Welcome to THE BUSORO PAY APP</h1>
 <h1> SELECT PAYMENT INFORMATION </h1>
-
+<form class="trxn-form" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" name="Pay"> Send </button>
+</form>
 <h3> CLICK NEXT &gt&gt TO CONTINUE </h3>
 {% endblock %}

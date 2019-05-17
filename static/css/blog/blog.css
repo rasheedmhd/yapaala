@@ -10,7 +10,7 @@
   padding:30px;
 }
 
-.wrapper h3{
+.declare{
   text-align: center;
   font-size: 54px;
   color: #1B1464;
@@ -30,4 +30,28 @@
 
 .details {
     margin-bottom: 50px;
+}
+
+@media(max-width: 480px) {
+
+  .main-content {
+    width: 100%;
+    margin: auto;
+    border-radius: 3px solid red;
+    padding:10px;
+  }
+
+
+  .declare {
+    font-size: 34px;
+    padding: 10px;
+    margin:0px;
+  }
+
+  .blog-item {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
 }

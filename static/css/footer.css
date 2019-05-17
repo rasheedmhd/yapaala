@@ -28,7 +28,7 @@ footer {
   color: #fff;
   text-align: center;
   padding: 3px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media(max-width: 480px) {
@@ -37,16 +37,20 @@ footer {
     display: block;
   }
 
-  .footer .details li, h3{
-    font-size: 18px;
-    padding: 2px;
-
+.details li, h3{
+    font-size: 12px;
+    padding: 0px;
   }
 
   .footer {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+
+  .f-headers {
+    padding: 0px;
   }
 }
 

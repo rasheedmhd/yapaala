@@ -4,19 +4,28 @@
 
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/master/master.css' %}">
-<h1> become an author </h1>
+<div class="container">
 
-<div class="commonSend">
+  <h1> Start writing for us. </h1>
 
-  <form action="https://commonsend.herokuapp.com/api/v1.0/send_contact_form/key/"  methods="POST">
-    <input type="text"  name="lookup"   hidden value="Fortunemens">
-    <input type="text"  name="callback" hidden value="https://example.com/contact.html">
-    <input type="text"  name="name"   required class="form-control" placeholder="Full Name" required>
-    <input type="email" name="email"  required class="form-control" placeholder="Email Address" required>
-    <input type="text"  name="phone"  required class="form-control" placeholder="Phone number">
-    <textarea  type="text" name="message" required placeholder=" message"></textarea>
-    <input  type="submit" value="Send">
-  </form>
+  <div class="commonSend">
+
+    <form action="https://commonsend.herokuapp.com/api/v1.0/send/send_contact_form/CoMmOnU0d7B0xJnj8W30kBo35JpkBZeRmoNPaasEnD/" method="POST">
+        <input  type="text" hidden name="lookup" value="Yapaala">
+        <input  type="text" hidden name="callback" value="http://yapaala.herokuapp.com/blog/how-to/writing/author">
+
+          <input type="text" name="name" class="form-control" placeholder="Name" required>
+
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+
+          <input type="text" name="phone" class="form-control" placeholder="Phone number">
+
+          <textarea type="email" name="message" class="form-control" placeholder="Message" ></textarea>
+          <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+    </form>
+
+  </div>
 
 </div>
+
 {% endblock %}

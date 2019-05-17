@@ -12,4 +12,4 @@ def hotel_view(request):
 
 class hotel_page(DetailView):
     model = Hotel
-    template_name = 'hotels/hotel_page.html'
+    template_name = 'hotels/hotel_page_new.html'

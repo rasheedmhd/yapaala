@@ -37,3 +37,14 @@ a {
 li {
   list-style-type: none;
 }
+
+.container {
+  width: 80%;
+  margin:auto;
+}
+
+@media(max-width: 480 ) {
+  h1 {
+    font-size: 34px;
+  }
+}

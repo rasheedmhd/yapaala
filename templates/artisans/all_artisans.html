@@ -1,14 +1,27 @@
   {% extends 'base.html' %}
 
+  {% load static %}
+
 {% block content %}
-<p> + for all artisans in created and present in the database </p>
+<link rel="stylesheet" href="{% static 'css/artisans/all.css' %}">
 
-<p>+ </p>
+  <div class="all-artisans">
 
-<p>list them in list items below</p>
-<p>+</p>
+{% for artisan in artisan %}
+  		<div class="col">
+  				<div class="artisan-profile">
+  					<img src="profile.png">
+  					<h2>{{ artisan.name }}</h2>
+  					<h3>{{ artisan.work }}</h3>
+  					<p>Call:{{ artisan.Number }}</p>
+            <p> Location: {{ artisan.location }}</p>
+            <p> {{ artisan.description }}</p>
+  			  </div>
 
-<p>+ he he pseudo-code for loop
-</p>
+  		</div>
 
+{% endfor %}
+
+	</div>
+</body>
 {% endblock%}

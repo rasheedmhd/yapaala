@@ -1,6 +1,31 @@
 {% extends 'base.html' %}
 
 {% block content %}
+{% load static %}
 
-<h1> Home page of the artisans app</h1>
+<link rel="stylesheet" href="{% static 'css/master/master.css' %}">
+<div class="container">
+
+  <h1> Become an Artisan NOW!</h1>
+  <p>Make some kudi</p>
+
+  <div class="commonSend">
+
+    <form action="https://commonsend.herokuapp.com/api/v1.0/send/send_contact_form/CoMmOnU0d7B0xJnj8W30kBo35JpkBZeRmoNPaasEnD/" method="POST">
+        <input  type="text" hidden name="lookup" value="Yapaala">
+        <input  type="text" hidden name="callback" value="http://yapaala.herokuapp.com/blog/how-to/writing/author">
+
+          <input type="text" name="name" class="form-control" placeholder="Name" required>
+
+          <input type="email" name="email" class="form-control" placeholder="Email" required>
+
+          <input type="text" name="phone" class="form-control" placeholder="Phone number">
+
+          <textarea type="email" name="message" class="form-control" placeholder="Message" ></textarea>
+          <button type="submit" class="btn btn-primary mt-4">Send Message</button>
+    </form>
+
+  </div>
+
+</div>
 {% endblock%}

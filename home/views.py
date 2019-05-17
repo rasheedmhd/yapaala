@@ -32,7 +32,7 @@ def category_list(request):
 
 class home_view(ListView):
     model = House
-    paginate_by = 4
+    paginate_by = 6
     #context_object_name = 'house_items'
     template_name = 'home/home.html'
 

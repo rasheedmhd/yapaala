@@ -16,12 +16,13 @@
         <div class="details">
           <h2> DESCRIPTION </h2>
           <p>{{ house.description }}</p>
+          <p style="color:lightgrey">Posted on - {{ item.created|date:"F j, Y" }}</p>
         </div>
       </div>
       <div class="more">
         <h2> MORE INFORMATION </h2>
         <p> {{ house.options }} </p>
-        <p> <a style="color:dodgerblue" href="{% url 'home:post_by_category' house.category.slug %}">AREA: {{ house.category.name }}</a></p>
+        <p> <a style="color:dodgerblue" href="{% url 'home:post_by_category' house.category.slug %}">Find other apartments in {{ house.category.name }}</a></p>
       </div>
       <div class="list">
         <table>
@@ -39,17 +40,17 @@
           </tr>
           <tr class="grey">
             <td>
-              <li>Options available: {{ house.options }} </li>
+              <li> Options available: {{ house.options }} </li>
             </td>
           </tr>
           <tr>
             <td>
-              <li>Category: {{ house.category }} </li>
+              <li> Category: {{ house.category }} </li>
             </td>
           </tr>
           <tr class="grey">
             <td>
-              <li> {{ house.location }} </li>
+              <li>This apartment is located at {{ house.location }} </li>
             </td>
           </tr>
         </table>
@@ -59,19 +60,20 @@
 
     <div class="sidebar">
       <h3>Contact</h3>
-      <div class="contact">
-         <button class="call"> Call </button> <br>
-         <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
-         <button class="message"><a href="mailto:yapaala.info@gmail.com">Email</a></button> <br>
-    </div>
+      <div class="contact_info">
+        <p class="call"><a href="0547963492">Call</a></p>
+        <p class="whatsapp"><a href="">Whatsapp</a></p>
+        <p class="call"><a href="mailto:yapaala@gmail.com">Email</a></p>
       </div>
+    </div>
   </div>
 
   <div class="main_contact">
-        <div></div>
-         <button class="call"><a href="05444293033">Call</a></button> <br>
-         <button class="message"><a href="mailto:yapaala.info@gmail.com">Message</a></button> <br>
-         <button class="whatsapp"><a href="mailto:yapaala@gmail.com">Whatsapp</a></button>
+    <div class="contact_info">
+      <p class="call"><a href="0547963492">Call</a></p>
+      <p class="whatsapp"><a href="">Whatsapp</a></p>
+      <p class="call"><a href="mailto:yapaala@gmail.com">Email</a></p>
     </div>
+  </div>
 
 {% endblock %}

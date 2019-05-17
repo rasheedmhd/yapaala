@@ -22,6 +22,7 @@
 
 <div class="wrapper">
   <div class="main-content">
+    <!--
     <div class="sidebar">
       <div class="categories">
         <h4><a href="{% url 'hotels:hotel' %}"> Hotels </a></h4>
@@ -36,7 +37,7 @@
         <li>Green House</li>
         <li>ITC Guest House</li>
       </div>
-    </div>
+    </div>-->
 
     <div class="column">
 
@@ -46,12 +47,10 @@
           <div class="property-box">
              <img src="{{ item.picture.url }}" alt = "Picture of a house">
               <div class="details">
-                <p class="abt-property">{{ item.about }} </p>
-                <hr/>
                 <p class="amt">{{ item.amount }}</p>
-                <p>{{ item.location }}</p>
+                <p class="abt-property">{{ item.about }} </p>
+                <p class="loc">{{ item.location }}</p>
                 <p><a style="color:dodgerblue" href="{% url 'home:post_by_category' item.category.slug %}">Area: {{ item.category.name }}</a></p>
-                <p style="color:lightgrey">Posted on - {{ item.created|date:"F j, Y" }}</p>
               </div>
           </div>
         </a>
@@ -63,7 +62,7 @@
   </div>
 
 
-
+<!--
   <section id="pagination">
 
     <div class="pagination">
@@ -85,10 +84,11 @@
 
       {% endif %}
 
+
     </div>
 
   </section>
-
+-->
 </div>
 
 {% endblock %}
