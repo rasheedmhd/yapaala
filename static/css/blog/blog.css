@@ -3,6 +3,15 @@
   font-family: Quicksand, sans-serif;
 }
 
+h3.title {
+  margin:0;
+  background: #9c88ff;
+  color: white;
+  text-align: center;
+  font-size: 74;
+  padding: 100px 0 100px 0;
+}
+
 .main-content {
   width: 60%;
   margin: auto;

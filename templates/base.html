@@ -35,7 +35,8 @@
         </ul>
         {% if user.is_authenticated %}
         <li class="nav-item active">
-          <a class="nav-link" href="{% url 'accounts:dashboard' %}"> Profile </a>
+         <p> KENKEN <a href="#"> {{ user.username }}  </a> </p>
+          <!--<a class="nav-link" href="{% url 'accounts:dashboard' %}"> Profile </a>-->
         </li>
           <form class="logout_text" action="{% url 'accounts:logout' %}" method="post">
             {% csrf_token %}
@@ -62,14 +63,14 @@
         <ul><!--  We could put banner advertisements here.-->
           <li><a href="{% url 'home:home' %}"> Home </a></li>
           <li class="active"><a href="{% url 'home:all' %}"> All Areas </a></li>
-          <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
+        <!--  <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
           <li><a href="{% url 'blog:blog_home' %}"> Blog </a></li>
           <li><a href="{% url 'artisans:artisans_home' %}"> Artisans </a></li>
           {% if user.is_authenticated %}
             <li><a href="{% url 'rental_pay:add_payment' %}"> Pay Rent </a></li>
           {% else %}
             <li><a href="{% url 'rental_pay:rental_pay' %}"> Pay Rent </a></li>
-          {% endif %}
+          {% endif %}-->
         </ul>
       </nav>
     </div>
@@ -103,22 +104,24 @@
   				<div class="details">
   					<li> <a href="{% url 'blog:mission' %}"> Our Mission </a> </li>
   					<li><a href="{% url 'blog:help_and_faq' %}"> Help and FAQ </a></li>
-  					<li><a href="{% url 'blog:terms' %}"> Privay, Terms &amp Refunds </a></li>
+  					<li><a href="{% url 'blog:terms' %}"> Privacy, Terms &amp Refunds </a></li>
             <li><a href="#"> Team </a></li>
   				</div>
   		</div>
   		<div class="row2">
   			<h3 class="f-headers"> BLOG </h3>
   				<div class="details">
-  					<li> <a href="{% url 'blog:writing' %}"> Become an Author </a> </li>
+            <li>Comming Soon</li>
+  					<!--<li> <a href="{% url 'blog:writing' %}"> Become an Author </a> </li>-->
   				</div>
   		</div>
   		<div class="row3">
   			<h3 class="f-headers"> ARTISANS </h3>
   				<div class="details">
-  					<li> <a href="{% url 'artisans:artisans_home' %}"> Become an Artisan </a> </li>
+            <li>Comming Soon</li>
+  				<!--	<li> <a href="{% url 'artisans:artisans_home' %}"> Become an Artisan </a> </li>
   					<li> <a href="{% url 'artisans:all_artisans' %}"> Hire and Artisan </a> </li>
-  					<li> <a href="{% url 'artisans:all_artisans' %}"></a> </li>
+  					<li> <a href="{% url 'artisans:all_artisans' %}"></a> </li>-->
   				</div>
   		</div>
   		<div class="row4">

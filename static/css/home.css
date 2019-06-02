@@ -3,7 +3,7 @@ body {
 }
 
 .column {
-  columns: 4;
+  columns: 3;
   width: 100%;
   /*
   grid-template-rows: 1fr 1fr 1fr;

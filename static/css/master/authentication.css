@@ -3,12 +3,20 @@ body {
   font-family: Quicksand, sans-serif;
 }
 
+/*
 .auth-container {
-  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
 }
+*/
 
+label {
+  display: block;
+}
 .salutation {
-  font-size: 70px;
+  font-size: 54px;
   color: purple;
   text-align: center;
 }
@@ -16,7 +24,7 @@ body {
 h3 {
   color: darkgrey;
   text-align: center;
-  font-size: 34px;
+  font-size: 24px;
 }
 
 a {
@@ -37,7 +45,6 @@ input {
 
 .auth-forms {
   padding: 20px;
-  border: 1px solid purple;
   border-radius: 4px;
   text-align: center;
   width: 30%;

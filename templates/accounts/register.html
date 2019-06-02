@@ -5,20 +5,25 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/master/authentication.css' %}">
 
-<div class="auth-container">
-  <h1 class="salutation" > Welcome to Yapaala !</h1>
-  <h3>  Register here ! </h3>
-  <div class="auth-forms">
-    <form class="registration_form" method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input class="auth-btn" type="submit" value="Register">
-      <p> - OR - </p>
-      <p> <a href="{% url 'accounts:login' %}"> Login Here </a></p>
-    </form>
+<div class="auth-grid">
+  
+  <div class="auth-container">
+
+  </div>
+
+  <div class="auth-container">
+    <h1 class="salutation" > Welcome to Yapaala !</h1>
+    <h3>  Register here ! </h3>
+    <div class="auth-forms">
+      <form class="registration_form" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="auth-btn" type="submit" value="Register">
+        <p> - OR - </p>
+        <p> <a href="{% url 'accounts:login' %}"> Login Here </a></p>
+      </form>
+    </div>
   </div>
 
 </div>
-
-
 {% endblock %}
