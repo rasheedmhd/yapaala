@@ -76,6 +76,16 @@
 }
 
 
+.contact_info .call-num{
+	text-align: center;
+	color: #9c88ff;
+/*	background-color: #9c88ff;*/
+	font-size: 16px;
+	padding: 5px;
+	align-items: center;
+
+}
+
 .contact a {
 	text-decoration: none;
 	color: white;
