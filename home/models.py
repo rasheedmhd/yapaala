@@ -2,6 +2,8 @@ from django.db import models
 
 from django.urls import reverse
 
+from cloudinary.models import CloudinaryField
+
 class Category(models.Model):
     name = models.CharField(max_length=50, db_index=True)
     slug = models.SlugField(max_length=50, db_index=True, unique=True)
