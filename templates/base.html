@@ -4,7 +4,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title> Room Renting and Management Platform </title>
+    <title> Room Renting Platform </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static '/css/base/headers.css' %}">
     <link rel="stylesheet" href="{% static '/css/base/footer.css' %}">
@@ -63,7 +63,8 @@
         <ul><!--  We could put banner advertisements here.-->
           <li><a href="{% url 'home:home' %}"> Home </a></li>
           <li class="active"><a href="{% url 'home:all' %}"> All Areas </a></li>
-        <!--  <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
+       <!--   <li class="list-p"><a href="{% url 'home:create_property' %}"> List Property </a></li>
+          <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
           <li><a href="{% url 'blog:blog_home' %}"> Blog </a></li>
           <li><a href="{% url 'artisans:artisans_home' %}"> Artisans </a></li>
           {% if user.is_authenticated %}

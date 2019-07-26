@@ -4,6 +4,12 @@ from django.urls import reverse
 
 from cloudinary.models import CloudinaryField
 
+class Photo(models.Model):
+    image = CloudinaryField('houses')
+
+    def __str__(self):
+        return self.image.url
+
 class Category(models.Model):
     name = models.CharField(max_length=50, db_index=True)
     slug = models.SlugField(max_length=50, db_index=True, unique=True)
@@ -22,7 +28,8 @@ class Category(models.Model):
 
 # Create your models here.
 class House(models.Model):
-    picture     = models.ImageField(upload_to='houses/%Y/%m/%d/', default=None, null=True, blank=True)
+    picture     = models.ForeignKey(Photo, on_delete=models.CASCADE, default=None, null=True, blank=True)
+    #picture     = models.ImageField(upload_to='houses/%Y/%m/%d/', default=None, null=True, blank=True)
     about       = models.CharField(max_length=100, blank=True)
     slug        = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(default=None, null=True, blank=True)

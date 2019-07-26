@@ -15,7 +15,7 @@
       {% for item in object_list %}
       <a href="{% url 'home:details' item.pk %}">
         <div class="property-box">
-           <img src="{{ item.picture.url }}" alt = "Picture of a house">
+           <img src="{{ item.picture.image.url }}" alt = "Picture of a house">
             <div class="details">
               <p class="amt">{{ item.amount }}</p>
               <p class="abt-property">{{ item.about }} </p>

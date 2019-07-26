@@ -7,6 +7,24 @@ from django.views.generic import DetailView
 from django.views.generic.list import ListView
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+#configuring cloudinary
+from django import forms
+from django.http import HttpResponse
+
+from cloudinary.forms import cl_init_js_callbacks
+from .models import Photo
+from .forms import PhotoForm
+
+def upload(request):
+    context = dict(backend_form = PhotoForm())
+
+    if request.method == "POST":
+        form = PhotoForm(request.POST, request.FILES)
+        context['posted'] = form.instance
+        if form.is_valid():
+            form.save()
+
+    return render(request, 'home/property_form.html', context)
 
 '''
 # Create your views here.
@@ -64,5 +82,5 @@ class PostCategory(ListView):
         return context
 
 
-def comming_soon_view(request):
-    return render(request, 'comming_soon.html')
+def coming_soon_view(request):
+    return render(request, 'coming_soon.html')
