@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load cloudinary %}
+
+
+{% block content %}
+
+	<div class="banner_part" style="background: {% static 'assets/banner.jpg' %}">
+
+		<div class="container caption">
+			<h1>Welcome to Yapaala.com</h1>
+				<p id="intro-text"> Looking for a place to rent ?  Yapaala.com has a database of several houses in Garu that have empty rooms and are available for rent at any time. Browse through our database and get yourself a nice apartment the Holiday!</p>
+
+		<div class="categories_part">
+		<div class="search_part">
+			<div class="input-group">
+     		 <input type="text" class="form-control" placeholder="Search categories">
+      		<span class="input-group-btn">
+       		 <button id="btns" class="btn btn-default btn btn-primary" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</button>
+      </span>
+   		</div><!-- /input-group -->
+		</div>
+	</div>
+		</div>
+
+</div>
+	<!--
+		==================================
+		End of banner
+	!-->	
+
+
+	<!--
+		==================================
+		rooms
+	!-->	
+	<div class="container_content">
+		<div class="row">
+
+      {% for item in object_list %}
+
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <div class="room_pic">
+            <img src="{{ item.picture.image.url }}" alt = "Picture of a house">
+          </div>
+
+          <div class="text_caption">
+        		<li><b>  {{ item.about }} </b> </li>
+            <li>Price: <b>{{ item.amount }} </b> </li>
+            <li>Area: <b>{{ item.location }} </b> </li>
+                <!--<p>
+                  <a style="color:dodgerblue" href="{% url 'home:post_by_category' item.category.slug %}">Area: {{ item.category.name }}
+                  </a>
+                </p>-->
+            <p>
+              <a href="{% url 'home:details' item.pk %}" id="details" class="btn btn-primary" role="button">
+                Details
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    {% endfor %}
+
+</div>
+	</div>
+
+
+
+	<!--
+		==================================
+		End of rooms
+	!-->	
+
+{% endblock %}

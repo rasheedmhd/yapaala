@@ -7,6 +7,7 @@ from django.views.generic import DetailView
 from django.views.generic.list import ListView
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 #configuring cloudinary
 from django import forms
 from django.http import HttpResponse
@@ -52,7 +53,7 @@ class home_view(ListView):
     model = House
     paginate_by = 6
     #context_object_name = 'house_items'
-    template_name = 'home/home.html'
+    template_name = 'home/home2.html'
 
 class all_areas_view(ListView):
     model = House
