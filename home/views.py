@@ -85,3 +85,10 @@ class PostCategory(ListView):
 
 def coming_soon_view(request):
     return render(request, 'coming_soon.html')
+
+
+def land_home_view(request):
+    model = land
+    paginate_by = 6
+    #context_object_name = 'house_items'
+    template_name = 'home/land.html'

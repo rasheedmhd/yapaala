@@ -6,9 +6,11 @@ from django.views.generic import DetailView
 
 from .models import Blog
 
+
 def blog_home(request):
     posts = Blog.objects.all()
     return render(request, 'blog/blog_home.html', {'posts':posts})
+
 
 class blog_detail(DetailView):
     model = Blog
@@ -19,12 +21,12 @@ def blog_detail(request):
     posts = Blog.objects.all()
     return render(request, 'blog/blog_home.html', {'posts':posts})
 
+
 class blog_home(ListView):
     model = Blog
     paginate_by = 6
     template_name = 'blog/blog_home.html'
 '''
-
 
 def mission_view(request):
     return render(request, 'master/our_mission.html')

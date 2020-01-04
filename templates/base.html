@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title> Room Renting Platform </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <!-- <link rel="stylesheet" href="{% static '/css/base/headers.css' %}"> -->
+   <link rel="stylesheet" href="{% static '/css/base/headers.css' %}">
     <link rel="stylesheet" href="{% static '/css/base/footer.css' %}">
     <!--<link rel="stylesheet" href="{% static '/css/base/body.css' %}"> -->
     <link rel="stylesheet" href="{% static '/css/base/pagination.css' %}">
@@ -70,17 +70,21 @@
         {% endif %}
       </div>
     </nav>
+-->
 
- SECOND NAV BAR 
-  <header>
+ <!--SECOND NAV BAR  -->
+  <header id="second-header">
     <div class="snb_container">
+      <!--
       <div id="branding">
         <a href="{% url 'home:home' %}" ><img class="logo" src="{% static 'assets/yapaala logo.png' %}"></a>
-      </div>
+      </div>-->
       <nav class="first">
-        <ul> We could put banner advertisements here.
+        <ul>
           <li><a href="{% url 'home:home' %}"> Home </a></li>
           <li class="active"><a href="{% url 'home:all' %}"> All Areas </a></li>
+          <li><a href="{% url 'blog:blog_home' %}"> Land For Sale </a></li>
+          <!--
           <li class="list-p"><a href="{% url 'home:create_property' %}"> List Property </a></li>
           <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
           <li><a href="{% url 'blog:blog_home' %}"> Blog </a></li>
@@ -90,23 +94,20 @@
           {% else %}
             <li><a href="{% url 'rental_pay:rental_pay' %}"> Pay Rent </a></li>
           {% endif %}
+        -->
         </ul>
       </nav>
     </div>
   </header>
-
-    THIRD NAV BAR
+<!--
   <nav class="second">
       <ul>
-        <li><a href="{% url 'home:home' %}"> Home </a></li>
-        <li><a href="{% url 'home:comming_soon' %}"> For Rent </a></li>
-        <li><a href="{% url 'home:home' %}"> For Sale </a></li>
-        <li><a href="{% url 'home:comming_soon' %}"> Agents </a> </li>
-        <li class="attn"><a href="{% url 'home:comming_soon' %}"> List Property </a></li>
+        <li><a href="{% url 'home:all' %}"> All Houses </a></li>
+        <li><a href="{% url 'blog:blog_home' %}"> Land For Sale </a></li>
       </ul>
   </nav>
--->
 
+-->
   {% endblock %}
 
   {% block title %}

@@ -16,7 +16,6 @@ header {
 	background: #431C53;
 	color: #fff;
 	min-height: 30px;
-	padding-top: 20px;
 	font-family: roboto, sans-serif;
 }
 
@@ -32,6 +31,10 @@ header li:hover {
 	color: #fff;
 }
 
+.first ul li {
+	margin: 0 0 0 0;
+}
+
 header a {
 	color:  #fff;
 	text-decoration: none;
@@ -39,6 +42,7 @@ header a {
 	font-size: 16px;
 }
 
+*/
 header ul {
 	margin: 0;
 	padding: 0;
@@ -102,4 +106,10 @@ nav.second li a:hover {
 
 li {
 	list-style-type: none;
+}
+
+/*SECOND HEADER*/
+#second-header {
+	margin: 0 0 0 0;
+	background-color: #431C53;
 }
