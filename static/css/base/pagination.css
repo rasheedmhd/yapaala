@@ -19,7 +19,7 @@
 
 span a.current_page_num {
 	background-color: #431C53;
-	color: white;
+	color: white !important;
 	padding: 10px;
 	border-radius: 5px;
 	margin: 0 10px 0 10px;
