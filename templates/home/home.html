@@ -5,27 +5,13 @@
 
 
 {% block content %}
-
-<div class="banner_part" style="background: {% static 'assets/banner.jpg' %}">
-
-	<div class="container caption">
-		<h1>Welcome to Yapaala.com</h1>
-		<p id="intro-text"> Looking for a place to rent ?  Yapaala.com has a database of several houses in Garu that have empty rooms and are available for rent at any time. Browse through our database and get yourself a nice apartment the Holiday!</p>
-
-		<div class="categories_part">
-        <!--
-        		<div class="search_part">
-        			<div class="input-group">
-             		 <input type="text" class="form-control" placeholder="Search categories">
-              		<span class="input-group-btn">
-               		 <button id="btns" class="btn btn-default btn btn-primary" type="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Search</button>
-              </span>
-           		</div>
-        		</div>-->
-	 </div>
+<div class="banner_part">
+  <div class="jumbotron section_banner">
+      <h1 class="text-center">Your All-In-One Platform for <br> Room Renting <br></h1>
+      <p class="text-center"><a class="btn btn-primary get_started btn-lg" href="#" role="button">Get Started</a></p>
+  </div>
 </div>
 
-</div>
 	<!--
 		==================================
 		End of banner
@@ -33,9 +19,8 @@
 
 
 	<!--
-		==================================
 		rooms
-	!-->	
+	-->	
 	<div class="container_content">
 		<div class="row">
 
@@ -72,9 +57,9 @@
 
 
 	<!--
-		==================================
 		End of rooms
-	!-->	
+  !-->	
+  
 <!-- PAGINATION -->
   <section id="pagination">
 
@@ -102,4 +87,162 @@
 
   </section>
 
+  <!--
+    ==================================
+    How it works
+    ===================================
+  !-->  
+
+  <div class=" container how_it_works">
+    <h1 class="text-center">How Yapaala Works</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail contact_info">
+          <img class="how_it_works_imgs" src="{% static 'assets/room_select.jpg' %}" alt="contact us">
+          <div class="caption contact_caption">
+            <h2>Select a room</h2>
+            <p>We help you get a room for rent <br> 
+              Browse through our database and select the room that best matches your requirements.
+              We have a lot of rooms based on all areas in towns that we operate in.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail contact_info">
+       <img class="how_it_works_imgs" src="{% static 'assets/commission.jpg' %}" alt="Pay your commission">
+          <div class="caption contact_caption">
+            <h2>Commission</h2>
+            <p>We take a Commission of 15% <br>
+              After selecting the room that best matches your requirements, we take a commission of 15%. The 15% is calculated multiplying the amount of the room per month with the number of months you are renting for.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail contact_info">
+        <img class="how_it_works_imgs" src="{% static 'assets/payment.jpg' %}" alt="Pay your rent">
+          <div class="caption contact_caption">
+            <h2>Payment</h2>
+            <p>You then pay your rent to the Landlord <br>
+              At this stage, we take you to go see the room you are renting and introduce you to your new Landlord.
+              After settling with your Landlord, you then move in immediately.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+<!--
+==================================
+End of How it works
+===================================
+!-->  
+
+<!--
+==================================
+Lands for sale
+===================================
+!-->  
+
+
+<div class=" container land_section">
+    <h1 class="text-center">Land for Sale</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail land_info">
+        
+          <div class="caption land_caption">
+            <h2 class="land_location text-center">Garu Tangzug</h2>
+               <div class="details_section">
+                  <p>A cool One acres of land located at Garu Tangzug for sale <br>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. 
+                  </p>
+                    <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>
+                
+               </div>
+                  <img src="{% static 'assets/land1.jpg' %}" alt="land picture">
+                     
+          </div>
+        </div>
+      </div>
+
+
+        <div class="col-sm-6 col-md-6">
+          <div class="thumbnail land_info">
+            <div class="caption land_caption">
+              <h2 class="land_location text-center">Garu Tangzug</h2>
+                  <div class="details_section">
+                    <p>A cool One acres of land located at Garu Tangzug for sale <br>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. 
+                    </p>
+                      <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>  
+               </div>
+                  <img src="{% static 'assets/land2.jpg' %}" alt="land picture">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- 
+=================================================
+Hotel Section
+================================================
+-->
+<div class=" container hotel_section">
+    <h1 class="text-center">Hotel for Rent</h1>
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <div class="thumbnail hotel_info">    
+          <div class="caption hotel_caption">
+            <h2 class="hotel_name text-center">Quality Guest House</h2>
+                  <img src="{% static 'assets/hotel1.jpg' %}" alt="contact us">
+                   <div class="hotel_details">
+                      <p>A cool Guest House apartments idle for people seeking for clean and quit The apartment is a self contain building located at the Garu Tanzug residential area. It is 16 minutes walk to Garu town and 21 minutes walk to the Garu market square. 
+                      </p>
+                   </div>   
+                 <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Book a room</a></p> 
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="col-sm-6 col-md-6">
+          <div class="thumbnail hotel_info">
+            <div class="caption hotel_caption">
+              <h2 class="hotel_name text-center">Mbang Guest House</h2>
+                  <img src="{% static 'assets/hotel2.jpg' %}" alt="contact us">
+
+                  <div class="hotel_details">
+                       <p>A cool Guest House apartments idle for those seeking for a quite distination. The house is a private Four-coner building located at the Garu-Natinga. The apartment is 7 minutes walk to Garu Y-junction and 16 minutes walk to the Garu Market Square.. 
+                      </p>
+                   </div>
+                   
+                 <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Book a room</a> 
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- 
+=================================================
+End of Guest House Section
+================================================
+-->
 {% endblock %}
+
+

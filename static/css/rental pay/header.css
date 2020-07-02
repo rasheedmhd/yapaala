@@ -1,3 +1,23 @@
+.navbar-brand img {
+	height: 3rem;
+	position: absolute;
+	top: 18px;	
+}
+
+.navbar-default {
+    background-color: #6f0b69;
+    border: none;
+    color: white;
+    margin: 0px;
+    padding: 10px;   
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+    font-size: 18px;
+}
+
+/*
 .snb_container {
 	width: 80%;
 	margin: auto;
@@ -19,7 +39,7 @@ header {
 	color: #1B1464;
 	min-height: 30px;
 	padding-top: 20px;
-	font-family: roboto, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 header li:hover {
@@ -50,3 +70,4 @@ header nav {
 	float: right;
 	margin-top: 0;
 }
+*/

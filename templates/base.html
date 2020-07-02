@@ -6,36 +6,45 @@
     <meta charset="utf-8">
     <title> Room Renting Platform </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-   <link rel="stylesheet" href="{% static '/css/base/headers.css' %}">
+  
+    <link rel="stylesheet" href="{% static '/css/base/headers.css' %}">
     <link rel="stylesheet" href="{% static '/css/base/footer.css' %}">
     <!--<link rel="stylesheet" href="{% static '/css/base/body.css' %}"> -->
     <link rel="stylesheet" href="{% static '/css/base/pagination.css' %}">
     <link rel="stylesheet" href="{% static '/css/home.css' %}">
-
-    <style>
-      @import url('https://fonts.googleapis.com/css?family=Quicksand');
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans:wght@800&display=swap" rel="stylesheet">
   </head>
 
-  <body>
   {% block headers %}
-
-    <header>
-    <div class="head-wrapper">
-      <div class="logo">
-        <a href="{% url 'home:home' %}"> 
+	<nav class="navbar navbar-default navbar-home">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#example-navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{% url 'home:home' %}">
           <img src="{% static 'assets/logo.png' %}">
         </a>
       </div>
-      <nav>
-        <ul>
-          <li> Contact Us: 0553727115 / 0547963492 </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!--  FIRST NAV BAR 
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="example-navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="{% url 'home:all' %}">Rooms</a></li>
+            <li><a href="{% url 'hotels:hotel' %}">Hotels</a></li>
+            <li><a href="{% url 'artisans:artisans_home' %}">Artisans</a></li>
+            <li><a href="{% url 'blog:blog_home' %}">Lands for Sale</a></li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<!--
+   FIRST NAV BAR 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -72,42 +81,6 @@
     </nav>
 -->
 
- <!--SECOND NAV BAR  -->
-  <header id="second-header">
-    <div class="snb_container">
-      <!--
-      <div id="branding">
-        <a href="{% url 'home:home' %}" ><img class="logo" src="{% static 'assets/yapaala logo.png' %}"></a>
-      </div>-->
-      <nav class="first">
-        <ul>
-          <li><a href="{% url 'home:home' %}"> Home </a></li>
-          <li class="active"><a href="{% url 'home:all' %}"> All Areas </a></li>
-          <li><a href="{% url 'blog:blog_home' %}"> Land For Sale </a></li>
-          <!--
-          <li class="list-p"><a href="{% url 'home:create_property' %}"> List Property </a></li>
-          <li><a href="{% url 'hotels:hotel' %}"> Hotels </a></li>
-          <li><a href="{% url 'blog:blog_home' %}"> Blog </a></li>
-          <li><a href="{% url 'artisans:artisans_home' %}"> Artisans </a></li>
-          {% if user.is_authenticated %}
-            <li><a href="{% url 'rental_pay:add_payment' %}"> Pay Rent </a></li>
-          {% else %}
-            <li><a href="{% url 'rental_pay:rental_pay' %}"> Pay Rent </a></li>
-          {% endif %}
-        -->
-        </ul>
-      </nav>
-    </div>
-  </header>
-<!--
-  <nav class="second">
-      <ul>
-        <li><a href="{% url 'home:all' %}"> All Houses </a></li>
-        <li><a href="{% url 'blog:blog_home' %}"> Land For Sale </a></li>
-      </ul>
-  </nav>
-
--->
   {% endblock %}
 
   {% block title %}
@@ -115,6 +88,15 @@
 
   {% block content %}
   {% endblock %}
+
+  <!-- Artisans ad -->
+  <div class="jumbotron artisan_section">
+    <h1 class="text-center">Looking for an Artisan?</h1>
+    <p>Yapaala has a database of Artisans such as Painter, Plumber, Carpenter, Electrician, 
+      Satelite Disk installer, etc
+    </p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Click Here</a></p>
+  </div>
 
   {% block footer %}
   <footer>
@@ -160,6 +142,7 @@
     </div>
   </footer>
   {% endblock %}
+
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

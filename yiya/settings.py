@@ -100,13 +100,14 @@ WSGI_APPLICATION = 'yiya.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'db_yapaala',
-        'USER': 'yidana',
-        'PASSWORD': 'champions',
+        'NAME': 'yapaaladb',
+        'USER': 'starlet',
+        'PASSWORD': 'hashttag',
         'HOST': 'localhost',
         'PORT': '5432',
     }
 }
+
 
 db_from_env = dj_database_url.config()
 DATABASES['default'].update(db_from_env)
