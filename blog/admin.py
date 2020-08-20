@@ -1,11 +1,12 @@
 from django.contrib import admin
 
-from . models import Blog
+from . models import Land, Photo
 # Register your models here.
 
-class BlogAdmin(admin.ModelAdmin):
-    list_display = ['title','status', 'slug']
-    list_editable = ['status']
+class LandAdmin(admin.ModelAdmin):
+    list_display = ['title','seller', 'slug']
     prepopulated_fields = {'slug': ('title',)}
 
-admin.site.register(Blog, BlogAdmin)
+admin.site.register(Land, LandAdmin)
+
+admin.site.register(Photo)

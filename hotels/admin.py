@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from . models import Hotel, Realtor
+from . models import Hotel, Manager, Photo
 # Register your models here.
 
 class HotelAdmin(admin.ModelAdmin):
@@ -8,4 +8,6 @@ class HotelAdmin(admin.ModelAdmin):
 
 admin.site.register(Hotel, HotelAdmin)
 
-admin.site.register(Realtor)
+admin.site.register(Manager)
+
+admin.site.register(Photo)

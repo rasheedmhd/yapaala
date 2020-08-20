@@ -6,8 +6,7 @@
 
 <div class="about-dashboard">
   Welcome to your profile dashboard. Your dashboard is a gateway to the whole Yapaala
-  Platform. Reach to the Artisans page, Read Blog Posts, Pay your rent all here.
-  You can also see the status of your rent payments
+  Platform. Reach to the Artisans page,Lands buying page and Hotel Booking.
 </div>
 
 	<div class="dashboard">
@@ -19,51 +18,43 @@
 			</div>
 
 			<div class="btns">
-				<p class="artisan">
-          <a href="{% url 'artisans:artisans_home' %}"> Become an Artisan </a>
-        </p>
-				<p class="payment">
-          <a href="{% url 'rental_pay:add_payment' %}"> Payment </a>
-        </p>
-        <p class="trxns">
-          <a  href="{% url 'rental_pay:transaction_list' %}"> Transactions </a>
-        </p>
+				<p class="artisan"> <a href="{% url 'artisans:artisans' %}"> Become an Artisan </a></p>
+			</div>
+
+			<div>
+				<form class="logout_text" action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="logout"> Logout </button>
+          </form>
 			</div>
 		</div>
 
 
 		<div class="dash-content">
 
-				<a href="{% url 'rental_pay:add_payment' %}"><div class="box">
+				<a href="{% url 'hotels:hotel' %}"><div class="box">
 					<img src="{% static 'assets/dashboard/pay rent.svg' %}">
-					<h4>Pay Rent</h4>
+					<h4>Book a Room</h4>
 				</div></a>
 
-				<a href="{% url 'artisans:all_artisans' %}"><div class="box">
+				<a href="{% url 'artisans:artisans' %}"><div class="box">
 					<img src="{% static 'assets/dashboard/find artisans.svg' %}">
 					<h4>Find an Artisan</h4>
 				</div></a>
 
-				<a href="{% url 'blog:blog_home' %}"><div class="box">
+				<a href="{% url 'lands:lands' %}"><div class="box">
 					<img src="{% static 'assets/dashboard/read blog posts.svg' %}">
-					<h4>Read</h4>
+					<h4>Lands for Sale</h4>
 				</div></a>
 
     </div>
 
     <hr/>
 
-    <div class="dash-details">
-      <div class="">
-        <h2> Rent Expiry Status</h2>
-      </div>
-
-      <div class="">
-        <h2> Pending Payments </h2>
-      </div>
-
-    </div>
 
 	</div>
+	{% block artisans_ad %}
+
+	{% endblock %}
 
 {% endblock %}

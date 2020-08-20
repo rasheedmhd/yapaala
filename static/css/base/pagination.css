@@ -1,8 +1,6 @@
 #pagination {
-	background: white;
 	text-align: center;
-	padding: 20px;
-	margin: 10px;
+	padding-top: 20px;
 }
 
 .pagination {
@@ -14,6 +12,7 @@
 	padding: 10px;
 	text-decoration: none;
 	color: #431C53;
+	font-size: 18px;
 }
 
 
@@ -21,21 +20,10 @@ span a.current_page_num {
 	background-color: #431C53;
 	color: white !important;
 	padding: 10px;
-	border-radius: 5px;
 	margin: 0 10px 0 10px;
 }
 
 .pagination a:hover {
 	background-color:#431C53;
 	color: white;
-}
-
-.previous {
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-}
-
-.next {
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
 }

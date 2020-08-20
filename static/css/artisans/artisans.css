@@ -1,0 +1,131 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.artisans_banners img{
+  background: url("img/artisans.jpg");
+  width: 100%;
+  height: 430px;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+
+/*banner caption styling*/
+.banner-caption{
+  position: relative;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 20;
+  max-width: 900px;
+  margin-top: -100px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  padding: 70px 30px 100px;
+  border-radius: 20px;
+  background-color: #431C53;
+  box-shadow: 0 11px 17px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #fff;
+
+}
+
+.banner-caption p {
+  font-size: 24px;
+  padding: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner-caption h3{
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.banner-caption h1 {
+  padding: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 30px;  
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*End of Banner Section styling*/
+
+.artisan_header {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 60px;
+}
+
+  .thumbnail {
+    border: none;
+  }
+
+  .artisan_details {
+    text-align: left;
+    padding: 10px;
+  }
+  .artisan_details li {
+    list-style: none;
+    font-size: 17px;
+  }
+
+  .artisan_pic img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .all_artisans h2 {
+    text-align: center;
+  }
+
+  #hire {
+    background: #431C53;
+    width: 100%;
+    margin:auto;
+    padding: 10px;
+    font-weight: bold;
+}
+
+a {
+    color: white;
+}
+
+/*==========================
+  Rooms styling
+/*==========================*/
+
+@media (max-width: 768px) {
+  .banner-caption{
+    max-width: 330px;
+    margin-top: -430px;
+    padding: 50px 30px 60px;
+  
+
+}
+.caption_text{
+  width: 100%;
+  padding: 0px;
+} 
+  .banner_section {
+    width: 100%;
+    height: 600px;
+
+}
+
+.banner-caption h3{
+  font-size: 40px;
+  font-weight: bold;
+}
+.banner-caption p{
+  padding: 20px;
+}

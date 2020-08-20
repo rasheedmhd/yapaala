@@ -23,10 +23,6 @@
     font-size: 18px;
 }
 
-ul li:hover {
-	background-color: lightgreen;
-	color: white;
+ul {
+	list-style-type: none;
 }
-
-
-

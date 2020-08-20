@@ -8,7 +8,7 @@
 <div class="banner_part">
   <div class="jumbotron section_banner">
       <h1 class="text-center">Your All-In-One Platform for <br> Room Renting <br></h1>
-      <p class="text-center"><a class="btn btn-primary get_started btn-lg" href="#" role="button">Get Started</a></p>
+      <p class="text-center"><a class="btn btn-primary get_started btn-lg" href="{% url 'accounts:register' %}" role="button">Get Started</a></p>
   </div>
 </div>
 
@@ -33,7 +33,7 @@
           </div>
 
           <div class="text_caption">
-        		<li><b>  {{ item.about }} </b> </li>
+        		<li><b>About: {{ item.about }} </b> </li>
             <li>Price: <b>{{ item.amount }} </b> </li>
             <li>Area: <b>{{ item.location }} </b> </li>
                 <!--<p>
@@ -94,11 +94,11 @@
   !-->  
 
   <div class=" container how_it_works">
-    <h1 class="text-center">How Yapaala Works</h1>
+    <h1 class="text-center">How to Rent a Room</h1>
     <div class="row">
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail contact_info">
-          <img class="how_it_works_imgs" src="{% static 'assets/room_select.jpg' %}" alt="contact us">
+          <img class="how_it_works_imgs" src="{% static 'assets/selection.svg' %}" alt="contact us">
           <div class="caption contact_caption">
             <h2>Select a room</h2>
             <p>We help you get a room for rent <br> 
@@ -111,7 +111,7 @@
 
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail contact_info">
-       <img class="how_it_works_imgs" src="{% static 'assets/commission.jpg' %}" alt="Pay your commission">
+       <img class="how_it_works_imgs" src="{% static 'assets/commission.svg' %}" alt="Pay your commission">
           <div class="caption contact_caption">
             <h2>Commission</h2>
             <p>We take a Commission of 15% <br>
@@ -123,7 +123,7 @@
 
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail contact_info">
-        <img class="how_it_works_imgs" src="{% static 'assets/payment.jpg' %}" alt="Pay your rent">
+        <img class="how_it_works_imgs" src="{% static 'assets/payment.svg' %}" alt="Pay your rent">
           <div class="caption contact_caption">
             <h2>Payment</h2>
             <p>You then pay your rent to the Landlord <br>
@@ -165,7 +165,7 @@ Lands for sale
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                       tempor incididunt ut labore et dolore magna aliqua. 
                   </p>
-                    <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>
+                    <p><a href="{% url 'lands:lands' %}" id="details" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>
                 
                </div>
                   <img src="{% static 'assets/land1.jpg' %}" alt="land picture">
@@ -184,7 +184,7 @@ Lands for sale
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. 
                     </p>
-                      <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>  
+                      <p><a href="{% url 'lands:lands' %}" id="details" class="btn btn-primary btn_styling" role="button">Buy</a></p><br>  
                </div>
                   <img src="{% static 'assets/land2.jpg' %}" alt="land picture">
           </div>
@@ -209,7 +209,7 @@ Hotel Section
                       <p>A cool Guest House apartments idle for people seeking for clean and quit The apartment is a self contain building located at the Garu Tanzug residential area. It is 16 minutes walk to Garu town and 21 minutes walk to the Garu market square. 
                       </p>
                    </div>   
-                 <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Book a room</a></p> 
+                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a></p> 
           </div>
         </div>
       </div>
@@ -227,7 +227,7 @@ Hotel Section
                       </p>
                    </div>
                    
-                 <p><a href="tel:0547963492" class="btn btn-primary btn_styling" role="button">Book a room</a> 
+                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a> 
           </div>
         </div>
       </div>

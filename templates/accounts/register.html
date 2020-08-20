@@ -8,7 +8,7 @@
 <div class="auth-grid">
 
   <div class="auth-container">
-    <h1 class="salutation" > Welcome to Yapaala !</h1>
+    <h1 class="salutation"><b>Sign up</b></h1>
         <div class="col-xs-12">
         {% if messages %}
         <ul class="messages">
@@ -20,14 +20,12 @@
         </ul>
         {% endif %}
       </div>
-    <h3>  Register here ! </h3>
     <div class="auth-forms">
       <form class="registration_form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <input class="auth-btn" type="submit" value="Register">
-        <p> - OR - </p>
-        <p> <a href="{% url 'accounts:login' %}"> Login Here </a></p>
+        <input class="auth-btn" type="submit" value="Sign up">
+        <p>Already have an account? <a href="{% url 'accounts:login' %}"> Log in</a></p>
       </form>
     </div>
   </div>

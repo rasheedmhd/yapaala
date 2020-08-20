@@ -16,8 +16,8 @@ class Category(models.Model):
 
     class Meta:
         ordering = ('name',)
-        verbose_name = "Category"
-        verbose_name_plural = "Categories"
+        verbose_name = "Town"
+        verbose_name_plural = "Towns"
 
     def __str__(self):
         return self.name
@@ -29,7 +29,6 @@ class Category(models.Model):
 # Create your models here.
 class House(models.Model):
     picture     = models.ForeignKey(Photo, on_delete=models.CASCADE, default=None, null=True, blank=True)
-    #picture     = models.ImageField(upload_to='houses/%Y/%m/%d/', default=None, null=True, blank=True)
     about       = models.CharField(max_length=100, blank=True)
     slug        = models.SlugField(max_length=100, db_index=True)
     description = models.TextField(default=None, null=True, blank=True)
@@ -55,10 +54,3 @@ class House(models.Model):
     def get_absolute_url(self):
         return reverse('home:home', args = [str(self.pk)])
 '''
-
-class Slider(models.Model):
-    image = models.ImageField(upload_to='Slider_Images/%Y/%m/%d/', default=None, null=True, blank=True)
-
-    def __str__(self):
-        image_name =  "Image used in the slider"
-        return image_name

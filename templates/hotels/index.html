@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/hotel.css' %}">
+  <div class="container-fluid hotel_banner">
+      <img src="">
+  </div>
+    <div class="banner-caption">
+        <div class="caption_text">
+            <h3>Welcome to Yapaala Hotels</h3>
+            <p>Browse through our hotels below, choose your favorite and
+            hit on "Contact Us" to start booking
+            </p>
+        </div>
+    </div>
+   <div class=" container hotel_section">
+        <h1 class="text-center">Book your desire Hotel here</h1>
+        <div class="row">
+
+{% for hotel in hotel_list %}
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail hotel_info">
+                <div class="caption hotel_caption">
+                  <h2 class="hotel_name text-center">{{ hotel.name }}</h2>
+                      <img src="{{ hotel.banner.url }}" alt = "Picture of this Hotel">
+
+                      <div class="hotel_details">
+                           <p>{{ hotel.description | truncatewords:25 }}
+                          </p>
+                       </div>
+                       
+                     <p><a href="{% url 'hotels:page' hotel.id %}" class="btn btn-primary btn_styling" role="button"> Book </a> 
+              </div>
+            </div>
+          </div>
+{% endfor %}
+
+        </div>
+    
+  </div>
+
+{% endblock %}

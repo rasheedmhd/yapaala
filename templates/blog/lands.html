@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static '/css/blog/land.css' %}">
+
+<!--Lands Banner -->
+<div class="section_banner">  
+</div>
+
+<!-- End of Land Banner -->
+
+<!-- Land Caption Description -->
+<div class="banner-caption">
+      <h1>All Lands</h1>
+          <div class="caption_text">
+              <h3>Looking for Land to Buy?</h3>
+              <p>Yapaala has a database of several lands in Ghana. Browse through our 
+              list of land available below and contact us to buy the land of your choice</p>
+          </div>
+    </div>
+
+<!-- End of Land Caption Description -->
+
+<div class=" container hotel_section">
+  <h1 class="text-center"> Buy lands through Yapaala</h1>
+    <div class="row">
+
+{% for land in lands %}
+            <div class="col-sm-6 col-md-6">
+              <div class="thumbnail hotel_info">
+                <div class="caption hotel_caption">
+                  <h2 class="hotel_name text-center">{{ land.title }}</h2>
+                      <img src="{{ land.land_image.url }}" alt = "Picture of this land">
+
+                      <div class="hotel_details">
+                           <p><span style="color:grey"> Posted on - {{ land.created|date:"F j, Y" }} by </span>{{ land.seller }}</p>
+                           <p>{{ land.body | truncatewords:50 }}</p>
+                       </div> 
+              </div>
+            </div>
+          </div>
+{% endfor %}
+
+     </div>
+    
+  </div>
+
+{% endblock %}

@@ -17,9 +17,7 @@
 	font-size: 30px;
 	padding: 10px;
 	text-align: right;
-	background-color: white;
 	margin: 0;
-	color: #4A4A4A;
 }
 
 .box img {
@@ -28,7 +26,7 @@
 }
 
 .details {
-	background-color: #d7d2d2;
+	background-color: #f2f5f6;
 	margin: 0;
 	padding: 10px;
 	}
@@ -49,7 +47,6 @@
 }
 .main, .sidebar {
 	background: white;
-	border-radius: 6px;
 }
 
 /*styling of sidebar*/
@@ -107,7 +104,6 @@
 	text-transform: uppercase;
 	font-size: 20px;
 	text-align: center;
-	color: #B8189A;
 	margin: 10px;
 }
 
@@ -132,10 +128,11 @@ td {
 }
 
 .grey {
-	background-color: lightgrey;
+	background-color: #f2f5f6;
 }
 
 .main h2 { color: #B8189A; }
+
 .empty {
 	margin-top: 60px;
 }

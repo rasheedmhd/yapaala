@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from . models import House, Category, Slider, Photo
+from . models import House, Category, Photo
 
 class CategoryAdmin(admin.ModelAdmin):
 	list_display = ['name', 'slug']
@@ -19,5 +19,3 @@ class HouseAdmin(admin.ModelAdmin):
 admin.site.register(House, HouseAdmin)
 
 admin.site.register(Photo)
-
-admin.site.register(Slider)

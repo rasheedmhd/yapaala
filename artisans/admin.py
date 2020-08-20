@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Artisan
+from .models import Artisan, Photo
 
 class ArtisanAdmin(admin.ModelAdmin):
     list_display = ('name', 'work', 'Number', 'location')
@@ -9,3 +9,5 @@ class ArtisanAdmin(admin.ModelAdmin):
     list_filter = ('work', 'location')
 
 admin.site.register(Artisan, ArtisanAdmin)
+
+admin.site.register(Photo)

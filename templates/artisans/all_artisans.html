@@ -3,25 +3,45 @@
   {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/artisans/all.css' %}">
+<link rel="stylesheet" href="{% static 'css/artisans/artisans.css' %}">
 
-  <div class="all-artisans">
 
-{% for artisan in artisan %}
-  		<div class="col">
-  				<div class="artisan-profile">
-  					<img src="profile.png">
-  					<h2>{{ artisan.name }}</h2>
-  					<h3>{{ artisan.work }}</h3>
-  					<p>Call:{{ artisan.Number }}</p>
-            <p> Location: {{ artisan.location }}</p>
-            <p> {{ artisan.description }}</p>
-  			  </div>
+<div class="artisans_banner">  
+  <img src="">
+</div>
 
-  		</div>
+<div class="banner-caption">
+  <h1>Artisans</h1>
+    <div class="caption_text">
+        <h3>Looking for Artisan?</h3>
+        <p>Yapaala.com has a database of several Artisans in Ghana Browse through them and choose one that suit for your service </p>
+    </div>
+</div>
 
-{% endfor %}
 
-	</div>
-</body>
+<div class="container all_artisans">
+    <h1 class="artisan_header">Browse through all of our Artisans</h1>
+    <div class="row all_rows">
+      {% for artisan in artisan %}
+        <div class="col-sm-6 col-md-3 ">
+          <div class="thumbnail">
+            <div class="artisan_pic">
+                <img src="{{ artisan.photo.image.url }}" alt="artisan picture">
+            </div>
+            <div class="artisan_details">
+              <li>Name: {{ artisan.name }}</</li>
+              <li>Occupation: {{ artisan.work }}</li>
+              <li>Location: {{ artisan.location }}</li>
+              <p id="hire"> <a href="tel:{{ artisan.Number }}"> Hire </a></p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+{% block artisans_ad %}
+
+{% endblock %}
+
 {% endblock%}
