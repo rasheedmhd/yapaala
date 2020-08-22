@@ -12,7 +12,7 @@ h2, p {
 }
 
 /* banner styling */
-.section_banner {
+.home_banner {
 	background: url(img/banner.jpg);
 	width: 100%;
 	height: 400px;
@@ -33,7 +33,7 @@ h2, p {
 	margin:auto;
 }
 
-.section_banner h1 {
+.home_banner h1 {
 	line-height: 70px;
 	padding-bottom: 2px;
 	font-size: 74px;
@@ -72,8 +72,9 @@ h2, p {
 	height: 100%;
 }
 
-.caption h1 {
-	font-size: 70px;
+.contact_caption {
+	padding-bottom: 30px;
+	height: 100%;
 }
 
 /*==========================
@@ -96,7 +97,9 @@ How yapaala works
 }
 
 .how_it_works_imgs { 
-	padding-left:60px; 
+	padding-left: 120px;
+	width: 100%;
+	height: 100%;
 }
 
 .contact_info {
@@ -111,14 +114,11 @@ How yapaala works
 	width: 50%;
 	background-size: cover;
 	height: 50%;
-	overflow: hidden;
 }
 
 .contact_caption h2, p{
 	font-weight: bold;
 	text-align: center;
-
-
 }
 
 .btn_styling {
@@ -229,13 +229,12 @@ Hotel for Rent
 @media (max-width: 768px) {
 	/*Section _ banner*/
 
-	.section_banner h1 {
+	.home_banner h1 {
 		line-height: 60px;
 		padding-bottom: 80px;
 	}
 
-	.section_banner {
-		background: url(img/banner.jpg);
+	.home_banner {
 		width: 100%;
 		height: 400px;
 		background-size: cover;
@@ -252,91 +251,98 @@ Hotel for Rent
 		-o-background-size: cover;
 	}
 
+	#hero_text {
+		font-size: 38px;
+	}
 
-
-.font_size {	
-	font-size: 20px;
-	padding: 10px;
-	width: 200px;
-}
-
-/* End of Section _ banner*/
-	
-
-/* How Yapaala Works*/
-	.how_it_works h1{
-	font-size: 40px;
-	text-align: left;
-}
-
-.contact_info img {
-	width: 50%;
-	background-size: cover;
-	height: 30%;
-	overflow: hidden;
-	padding-top: 30px;
-}
-
-.contact_info {
-	width: 100%;
-	height: 550px;
-	overflow: hidden;
-	box-shadow: 1px 2px 4px 1px #888888;
-	border-radius: 10px;
-}
-
-/* End of How Yapaala Works*/
-
-	
-	
-/*Land for sale section*/
-
-.land_section h1{
-	color: black;
-	padding-top: 50px;
-	padding-bottom: 10px;
-	font-size: 50px;
-	text-align: left;
-}
-
-.land_info {
-	width: 100%;
-	height: 600px;
-	overflow: hidden;
-	box-shadow: 1px 2px 4px 1px #888888;
-}
-
-.land_info img {
-	width: 100%;
-	background-size: cover;
-	height: 280px;
-	overflow: hidden;
-
-}
-
-/*End of Land for sale section*/
-
-
-.hotel_section h1{
-	color: black;
-	padding-top: 50px;
-	padding-bottom: 10px;
-	font-size: 50px;
-	text-align: left;
-}
-
-.btn_styling{
-	margin-top: 20px;
-}
-
-}
-
-@media (max-width: 300px) {
-		.get_started {
-		margin-top: 70px;
+	.get_started {
+		margin-top: 10px;
 		margin-bottom: 100px;	
 		font-size: 18px;
-		width: 250px;
+		width: 150px;
 	}
+
+	.font_size {	
+		font-size: 20px;
+		padding: 10px;
+		width: 200px;
+	}
+
+	/* End of Section _ banner*/
+		
+	.container_content {
+		width: 100%;
+	}
+
+	/* How Yapaala Works*/
+	.how_it_works h1{
+		font-size: 40px;
+		text-align: left;
+	}
+
+	.contact_info {
+		width: 100%;
+		height: 100%;
+	}
+
+
+	.contact_info {
+		width: 100%;
+		height: 100%;
+		box-shadow: 1px 2px 4px 1px #888888;
+		border-radius: 10px;
+		margin-bottom: 30px;
+	}
+
+
+	/* End of How Yapaala Works*/
+	
+	/*Land for sale section*/
+
+	.land_section h1{
+		color: black;
+		padding-top: 50px;
+		padding-bottom: 10px;
+		font-size: 50px;
+		text-align: left;
+	}
+
+	.land_info {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		box-shadow: 1px 2px 4px 1px #888888;
+	}
+
+	.land_info img {
+		width: 100%;
+		background-size: cover;
+		height: 280px;
+		overflow: hidden;
+
+	}
+
+	/*End of Land for sale section*/
+
+
+	.hotel_section h1{
+		color: black;
+		padding-top: 50px;
+		padding-bottom: 10px;
+		font-size: 50px;
+		text-align: left;
+	}
+
+	.btn_styling{
+		margin-top: 20px;
+	}
+
+	@media (max-width: 300px) {
+		.get_started {
+			margin-top: 70px;
+			margin-bottom: 100px;	
+			font-size: 18px;
+			width: 250px;
+		}
 
 }

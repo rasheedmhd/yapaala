@@ -4,12 +4,16 @@ body {
   box-sizing: border-box;
 }
 
-.artisans_banners img{
+.artisans_banner {
   width: 100%;
-  height: 430px;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
+  height: 400px;
+  overflow: hidden;
+}
+
+.artisans_banner img {
+  margin-top: -100px;
+  width:100%;
+  height: 800px;
 }
 
 
@@ -32,21 +36,19 @@ body {
   box-shadow: 0 11px 17px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #fff;
-
+  font-family: 'Montserrat', sans-serif;
 }
 
 .banner-caption p {
   font-size: 24px;
   padding: 20px;
   color: white;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .banner-caption h3{
   font-size: 40px;
   font-weight: bold;
   color: white;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .banner-caption h1 {
@@ -55,7 +57,6 @@ body {
   font-weight: bold;
   font-size: 60px;
   margin-bottom: 30px;  
-  font-family: 'Open Sans', sans-serif;
 }
 
 /*End of Banner Section styling*/
@@ -103,28 +104,34 @@ a {
   Rooms styling
 /*==========================*/
 
+
 @media (max-width: 768px) {
-  .banner-caption{
-    max-width: 330px;
-    margin-top: -430px;
-    padding: 50px 30px 60px;
-  
+  .banner-caption {
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 0px;
+  }
 
-}
-.caption_text{
-  width: 100%;
-  padding: 0px;
-} 
-  .banner_section {
+    .banner-caption p {
+    font-size: 18px;
+  }
+
+  .banner-caption h3{
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  .banner-caption h1 {
+    font-size: 30px;  
+  }
+
+  .artisan_header {
+    font-size: 30px;
+  }
+
+  .thumbnail {
     width: 100%;
-    height: 600px;
+    margin: 0px;
+  }
 
-}
-
-.banner-caption h3{
-  font-size: 40px;
-  font-weight: bold;
-}
-.banner-caption p{
-  padding: 20px;
 }

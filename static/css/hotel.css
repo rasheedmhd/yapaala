@@ -1,4 +1,4 @@
-.hotel_banner img{
+.hotel_banner img {
 	background: url("img/banner.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -7,6 +7,9 @@
 	height: 400px;
 }
 
+.hotel_banner {
+	width: 100%;	
+}
 
 .banner-caption{
 	position: relative;
@@ -44,4 +47,25 @@
 
 p {
 	font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .banner-caption {
+	    margin-bottom: 30px;
+	    padding: 10px;
+	    border-radius: 0px;
+	}
+
+    .banner-caption p {
+	    font-size: 18px;
+	}
+
+	.banner-caption h3 {
+	    font-size: 22px;
+	    font-weight: bold;
+	}
+
+	.banner-caption h1 {
+	    font-size: 30px;  
+	}
 }
