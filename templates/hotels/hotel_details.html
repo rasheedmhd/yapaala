@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="{% static '/css/hotel_details.css' %}">
 
 <div class="overal_section">
@@ -18,7 +18,7 @@
 				<h1>About Agent</h1>
 				<img src="{{ hotel.manager.photo.image.url }}">
 				<h2>{{ hotel.manager.first_name }} {{ hotel.manager.second_name }}</h2>
-				<p>{{ hotel.manager.telephone }}</p>
+				<p>0{{ hotel.manager.telephone }}</p>
 				<p>{{ hotel.manager.email }}</p>
 				<p>{{ hotel.manager.website }}</p>
 			</div>
@@ -34,7 +34,7 @@
 			</div>
 
 			
-			<div class="text-descrip">
+			<div class="">
 					<p> {{ hotel.description }} </p>
 
 				</div>
@@ -42,7 +42,7 @@
 					<p class="location"><i class="fa fa-map-marker" style="font-size:50px; aria-hidden="true"></i>Location: {{ hotel.location  }}</p>
 					<p class="room_count"><i class="fa fa-bed" style="font-size:50px; aria-hidden="true"></i>Number of Rooms: {{ hotel.rooms  }}</p>
 					<p class="parking_space"><i class="fa fa-car" style="font-size:50px; aria-hidden="true"></i>Parking Space: {{ hotel.parking }}</p>
-					<p class="shower"><i class="fa fa-bath" style="font-size:50px; aria-hidden="true"></i>Rate: {{ hotel.rate  }}/Night</p>
+					<p class="shower"><i class="fa fa-money" style="font-size:50px; aria-hidden="true"></i>Rate: {{ hotel.rate  }}/Night</p>
 				</div>
 
 		</div>
@@ -63,76 +63,43 @@
 				<div class="row1">
 					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Water Supply</strong>
-					</div>
+						<strong>Water Supply</strong> <br>
 
-					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Refrigerator</strong>
-					</div>
+						<strong>Refrigerator</strong><br>
 
-				</div>
-
-				
-				<div class="row1">
-					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Airconditioners</strong>
-					</div>
+						<strong>Airconditioners</strong><br>
 
-					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong> Hot water Avalability </strong>
-					</div>
+						<strong> Hot water Avalability </strong><br>
 
-				</div>
-
-
-				<div class="row1">
-					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Dstv Reception</strong>
-					</div>
-					<div class="col-row">
+						<strong>Dstv Reception</strong><br>
+
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Security day & night</strong>
-					</div>
-					<div class="col-row">
+						<strong>Security day & night</strong><br>
+
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Cook yourself</strong>
-					</div>
+						<strong>Cook yourself</strong><br>
 
-				</div>
-
-
-				<div class="row1">
-					<div class="col-row">
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>kitchen</strong>
-					</div>
-					<div class="col-row">
+						<strong>kitchen</strong><br>
+
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Security light</strong>
-					</div>
-					<div class="col-row">
+						<strong>Security light</strong><br>
+
 						<i class="fa fa-check-square" style="font-size:30px; aria-hidden="true"></i>
-						<strong>Shower avability</strong>
+						<strong>Shower avability</strong><br>
 					</div>
-
-				</div>
-
-
-
-
 			</div>
 
-
+		</div>
+	</div>
 		<div class="empty"></div>
 
 		<div class="right-features"></div>
 	</div>
-
-
 
 </div>
 

@@ -118,7 +118,10 @@ STYLING OF CONTENT-GRID
 }
 
 
-
+.description_caption .location, .room_count, .parking_space, .shower {
+	text-align: left;
+	color: purple;
+}
 
 .text-descrip p {
 	color: #000;
@@ -167,6 +170,7 @@ STYLING OF CONTENT-GRID
 }
 .col-row {
 	display: inline-block;
+	color: purple;
 }
 
 

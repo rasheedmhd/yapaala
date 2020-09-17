@@ -57,13 +57,51 @@ body {
   margin-bottom: 30px;  
   font-family: 'Open Sans', sans-serif;
 }
-
 /*End of Banner Section styling*/
 
-.hotel_details {
-  margin-bottom: 60px;
+
+/*Land info*/
+
+.land_info {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 2px 4px 1px #888888;
+  border-radius: 10px;
+}
+.land_caption {
+  width: 100%;
+  height: auto;
 }
 
+.land_info img {
+  width: 100%;
+  background-size: cover;
+  height: 340px;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+
+}
+
+.land_caption h2, p{
+  font-weight: bold;
+  text-align: center;
+  margin: 5px;
+
+}
+
+
+.land_caption p {
+  text-align: left;
+  font-size: 18px;
+  padding: 10px;
+}
+
+
+
+
+/*Media Queries*/
 @media (max-width: 768px) {
   .banner-caption {
     margin-bottom: 30px;
