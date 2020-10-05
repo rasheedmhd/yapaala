@@ -9,7 +9,9 @@
 	border-radius: 0px;
 	
 }
-
+.bg-dark {
+    background-color: #431C53 !important;
+}
 .navbar-default {
     background-color: #6f0b69;
     border: none;

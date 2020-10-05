@@ -36,15 +36,15 @@
                 <div class="caption land_details">
                   <h2 class="land_name text-center">{{ land.title }}</h2>
                       <img src="{{ land.photo.image.url }}" alt = "Picture of this land">
-
                       <div class="land_details">
-                           <p><span style="color:grey"> Posted on {{ land.created|date:"F j, Y" }} by </span>{{ land.seller }}</p>
-                           <p>{{ land.body | truncatewords:10 }}</p>
-                           <p class="text-center"> If you are interesting in this land Call <a href="tel:0547963492"> 0547963492 </a></p>
-                       </div> 
+                        <p><span style="color:grey"> Posted on {{ land.created|date:"F j, Y" }} by </span>{{ land.seller }}</p>
+                        <h3><b> PRICE: {{ land.amount }}</b></h3>
+                        <p>{{ land.body }}</p>
+                        <p class="text-center"> If you are interesting in this land Call <a href="tel:0547963492"> 0547963492 </a></p>
+                      </div> 
+                </div>
               </div>
             </div>
-          </div>
 {% endfor %}
 
      </div>

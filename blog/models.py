@@ -13,6 +13,7 @@ class Photo(models.Model):
 
 class Land(models.Model):
     title = models.CharField(max_length=120)
+    price = models.CharField(max_length=12, default=None, null=True, blank=True)
     body  = models.TextField()
     more_infor = models.TextField()
     seller = models.CharField(max_length=50)
@@ -24,6 +25,9 @@ class Land(models.Model):
 
     class Meta:
         ordering = ('-publish',)
+
+    def amount(self):
+        return "GH₵ "+ str(self.price)
 
     def get_absolute_url(self):
         return reverse('lands:lands', args = [self.slug])

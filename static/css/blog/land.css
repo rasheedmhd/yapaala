@@ -81,7 +81,6 @@ body {
   margin: 0px;
   padding: 0px;
   border-radius: 5px;
-
 }
 
 .land_caption h2, p{
@@ -98,7 +97,9 @@ body {
   padding: 10px;
 }
 
-
+.land_details {
+  padding: 10px;
+}
 
 
 /*Media Queries*/
