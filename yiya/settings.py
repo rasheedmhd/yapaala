@@ -19,10 +19,10 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
-cloudinary.config( 
-  cloud_name = "rstarlet", 
-  api_key = "719249397368117", 
-  api_secret = "sRw3UFdpEHTUwXKmWgheRR8K58g" 
+cloudinary.config(
+  cloud_name = "rstarlet",
+  api_key = "719249397368117",
+  api_secret = "sRw3UFdpEHTUwXKmWgheRR8K58g"
 )
 
 
@@ -37,7 +37,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@!i$9pidbq)&mlv(g2i_u2f$937e)j2sir5c$+myoebape!@n+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['*']
 
@@ -149,6 +150,8 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+LOGIN_REDIRECT_URL = "accounts:dashboard"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
