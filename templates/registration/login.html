@@ -8,7 +8,6 @@
 <div class="auth-grid">
   <div class="auth-container">
     <h1 class="salutation" > Welcome to Yapaala !</h1>
-    <h3> Log in here !</h3>
     <div class="col-xs-12">
       {% if messages %}
       <ul class="messages">
@@ -20,10 +19,18 @@
       {% endif %}
     </div>
     <div class="auth-forms">
-
+        {% if form.errors %}
+        <p>
+        Your username or password is incorrect.
+        Please try again.
+        </p>
+        {% else %}
+        <p>Please, use the following form to log in:</p>
+        {% endif %}
       <form class="login_form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}">
         <input class="auth-btn" type="submit" value="Login">
         <p> Don't have an account ? <a href="{% url 'accounts:register' %}"> Register Here </a> </p>
       </form>

@@ -29,19 +29,25 @@ def register_view(request):
         args = {'form':form,'messages': storage}
     return render(request, 'accounts/register.html', args)
 
-
+#We are using the django default authentication framework for the login 
+"""#User Login view
 def login_view(request):
-    storage = messages.get_messages(request)
     if request.method == "POST":
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return redirect('home:home')
+            cd = form.cleaned_data
+            user = authenticate(request, username=cd['username'], password=cd['password'])
+            if user is not None:
+                if user.is_active:
+                    login(request, user)
+                    return redirect('accounts:dashboard')
+                else:
+                    return HttpResponse("Disabled user account")
+            else:
+                return redirect("Invalid user")
     else:
         form = AuthenticationForm()
-        args = {'form':form, 'messages': storage}
-    return render(request, 'accounts/login.html', args)
+    return render(request, 'registration/login.html', {'form': form})"""
 
 @login_required(login_url='accounts:login')
 def dashboard_view(request):
