@@ -30,6 +30,7 @@
       <form class="login_form" method="post">
         {% csrf_token %}
         {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}">
         <input class="auth-btn" type="submit" value="Login">
         <p> Don't have an account ? <a href="{% url 'accounts:register' %}"> Register Here </a> </p>
       </form>
