@@ -8,6 +8,8 @@ from django.views.generic.list import ListView
 
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from django.contrib.auth.decorators import login_required
+
 #configuring cloudinary
 from django import forms
 from django.http import HttpResponse
@@ -16,6 +18,7 @@ from cloudinary.forms import cl_init_js_callbacks
 from .models import Photo
 from .forms import PhotoForm
 
+@login_required()
 def upload(request):
     context = dict(backend_form = PhotoForm())
 
@@ -25,7 +28,7 @@ def upload(request):
         if form.is_valid():
             form.save()
 
-    return render(request, 'home/property_form.html', context)
+    return render(request, 'home/room_listing.html', context)
 
 '''
 # Create your views here.
