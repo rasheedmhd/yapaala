@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from . models import House, Category
 
@@ -16,19 +16,33 @@ from django.http import HttpResponse
 
 from cloudinary.forms import cl_init_js_callbacks
 from .models import Photo
-from .forms import PhotoForm
-
+from .forms import RoomListingForm
+"""
 @login_required()
 def upload(request):
-    context = dict(backend_form = PhotoForm())
+    context = dict(backend_form = RoomListingForm())
 
     if request.method == "POST":
-        form = PhotoForm(request.POST, request.FILES)
+        form = RoomListingForm(request.POST, request.FILES)
         context['posted'] = form.instance
         if form.is_valid():
             form.save()
 
     return render(request, 'home/room_listing.html', context)
+"""
+@login_required
+def list_room(request):
+    if request.method == "POST":
+        form = RoomListingForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect("home:all")
+        else:
+            return redirect("home:list_room")
+    else:
+        form = RoomListingForm()
+    return render(request, "home/room_listing.html", {"form":form})
+
 
 '''
 # Create your views here.

@@ -7,7 +7,7 @@
 {% block content %}
 <div class="banner_part">
   <div class="jumbotron home_banner">
-      <h1 id="hero_text" class="text-center">Your All-In-One Platform for <br> Room Renting <br></h1>
+    <!--  <h1 id="hero_text" class="text-center">Your All-In-One Platform for <br> Room Renting <br></h1> -->
       {% if user.is_authenticated %}
 
       {% else %}<p class="text-center"><a class="btn btn-primary get_started btn-lg" href="{% url 'accounts:register' %}" role="button">Get Started</a></p>
@@ -18,12 +18,12 @@
 	<!--
 		==================================
 		End of banner
-	!-->	
+	!-->
 
 
 	<!--
 		rooms
-	-->	
+	-->
 	<div class="container_content">
 		<div class="row">
 
@@ -61,8 +61,8 @@
 
 	<!--
 		End of rooms
-  !-->	
-  
+  !-->
+
 <!-- PAGINATION -->
   <section id="pagination">
 
@@ -94,7 +94,7 @@
     ==================================
     How it works
     ===================================
-  !-->  
+  !-->
 
   <div class="container how_it_works">
     <h1 class="text-center">How to Rent a Room</h1>
@@ -141,13 +141,13 @@
 ==================================
 End of How it works
 ===================================
-!-->  
+!-->
 
 <!--
 ==================================
 Lands for sale
 ===================================
-!-->  
+!-->
 
 
 <div class=" container land_section">
@@ -155,7 +155,7 @@ Lands for sale
     <div class="row">
       <div class="col-sm-6 col-md-6">
         <div class="thumbnail land_info">
-        
+
           <div class="caption land_caption">
             <h2 class="land_location text-center">Garu Dabilla</h2>
                <div class="details_section">
@@ -166,8 +166,8 @@ Lands for sale
                     </div>
                 <img src="{% static 'assets/land1.jpg' %}" alt="land picture">
                </div>
-                  
-                     
+
+
           </div>
         </div>
       </div>
@@ -182,13 +182,13 @@ Lands for sale
                       <p><a href="{% url 'lands:lands' %}" id="details" class="btn btn-primary btn_styling" role="button">Buy</a></p>
                       <img src="{% static 'assets/land2.jpg' %}" alt="land picture">
                </div>
-                  
+
           </div>
         </div>
       </div>
     </div>
 </div>
-<!-- 
+<!--
 =================================================
 Hotel Section
 ================================================
@@ -197,15 +197,15 @@ Hotel Section
     <h1 class="text-center">Hotel for Rent</h1>
     <div class="row">
       <div class="col-sm-6 col-md-6">
-        <div class="thumbnail hotel_info">    
+        <div class="thumbnail hotel_info">
           <div class="caption hotel_caption">
             <h2 class="hotel_name text-center">Quality Guest House</h2>
                   <img src="{% static 'assets/qaulity.jpeg' %}" alt="contact us">
                    <div class="hotel_details">
-                      <p>Quality Guest House, located at Garu Tanzug is the first Guest House in the Garu Township. It is walled and Gated and has parking spaces right outside of its entrance. It has 24/7 Security and the rooms are beautifully decorated. It houses a swimming pool in the middle of the Guest House.  
+                      <p>Quality Guest House, located at Garu Tanzug is the first Guest House in the Garu Township. It is walled and Gated and has parking spaces right outside of its entrance. It has 24/7 Security and the rooms are beautifully decorated. It houses a swimming pool in the middle of the Guest House.
                       </p>
-                   </div>   
-                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a></p> 
+                   </div>
+                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a></p>
           </div>
         </div>
       </div>
@@ -222,8 +222,8 @@ Hotel Section
                        <p>The M.A Modern Guest House is a cool Guest House idle for those seeking for a quite distination. The Guest house is a self contained building located at Garu Yapaala. The apartment is 5 minutes walk to Garu Y-junction and 7 minutes walk to the Garu Market Square. The Guest House is walled and Gated.There is a lot of parking spaces within its walls.
                       </p>
                    </div>
-                   
-                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a> 
+
+                 <p><a href="{% url 'hotels:hotel' %}" id="details" class="btn btn-primary btn_styling" role="button">Book a room</a>
           </div>
         </div>
       </div>
@@ -234,11 +234,9 @@ Hotel Section
 
 
 
-<!-- 
+<!--
 =================================================
 End of Guest House Section
 ================================================
 -->
 {% endblock %}
-
-

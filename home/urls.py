@@ -14,7 +14,7 @@ app_name = "home"
 
 urlpatterns = [
     path('', home_view.as_view(), name="home"),
-    path('rooms/listing', views.upload, name="list_room" ),
+    path('rooms/listing', views.list_room, name="list_room" ),
     path('rooms', all_areas_view.as_view(), name="all"),
 	path('rooms/town/<str:slug>/', PostCategory.as_view(), name="post_by_category"),
 	#re_path('property/category/(?P<pk>[\d]+)/$', PostCategory.as_view(), name="post_by_category"),

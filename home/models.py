@@ -50,6 +50,7 @@ class House(models.Model):
 
     def amount(self):
         return "GH₵ "+ str(self.price) + "/month"
+
 '''
     def get_absolute_url(self):
         return reverse('home:home', args = [str(self.pk)])
