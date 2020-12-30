@@ -6,7 +6,9 @@
 
 {% block content %}
 <div class="banner_part">
-  <div class="jumbotron home_banner">
+  <div class="home_banner">
+
+    <img src="{% static 'assets/banner.jpg' %}">
     <!--  <h1 id="hero_text" class="text-center">Your All-In-One Platform for <br> Room Renting <br></h1> -->
       {% if user.is_authenticated %}
 

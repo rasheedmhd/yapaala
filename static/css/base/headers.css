@@ -2,8 +2,12 @@
 	height: 3rem;
 	position: absolute;
 	top: 18px;	
+
 }
 
+.right_nav a{
+    color: #fff;
+}
 .navbar-home {
 	background-color: lightblue;
 	border-radius: 0px;
@@ -13,7 +17,8 @@
     background-color: #431C53 !important;
 }
 .navbar-default {
-    background-color: #6f0b69;
+    /*background-color: #6f0b69;*/
+    background-color: ;
     border: none;
     color: white;
     margin: 0px;
