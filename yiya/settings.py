@@ -18,7 +18,7 @@ import dj_database_url
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
-
+"""
 cloudinary.config(
   cloud_name = "rstarlet",
   api_key = "719249397368117",
@@ -29,7 +29,7 @@ cloudinary.config(
   cloud_name = os.environ.get("CLOUDINARY_CLOUD_NAME"),
   api_key = os.environ.get("CLOUDINARY_API_KEY"),
   api_secret = os.environ.get("CLOUDINARY_API_SECRET")
-)"""
+)
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -45,10 +45,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = "@!i$9pidbq)&mlv(g2i_u2f$937e)j2sir5c$+myoebape!@n+"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-#DEBUG =  os.environ.get('DJANGO_DEBUG', '') != 'False'
+#DEBUG = True
+DEBUG =  os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "www.yapaala.com"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
