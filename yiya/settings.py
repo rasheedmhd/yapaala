@@ -109,7 +109,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'yapaaladb',
-        'USER': 'starlet',
+        'USER': 'Starlet',
         'PASSWORD': 'hashttag',
         'HOST': 'localhost',
         'PORT': '5432',
